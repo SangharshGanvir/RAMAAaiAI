@@ -9,17 +9,19 @@ import { SpeechRecognizer, calculatePronunciationScore } from '@/voice/speechRec
 import VoiceButton from '@/components/VoiceButton';
 import CelebrationAnimation from '@/components/CelebrationAnimation';
 import { updatePronunciationScore } from '@/progress/progressTracker';
+import { pronunciationWords } from '@/data/pronunciationWords';
 
-const pronunciationWords = [
-  { word: 'apple', difficulty: 'easy' },
-  { word: 'banana', difficulty: 'easy' },
-  { word: 'elephant', difficulty: 'medium' },
-  { word: 'butterfly', difficulty: 'medium' },
-  { word: 'beautiful', difficulty: 'hard' },
-  { word: 'wonderful', difficulty: 'hard' },
-  { word: 'adventure', difficulty: 'hard' },
-  { word: 'imagination', difficulty: 'hard' },
-];
+// Shuffle words for variety
+function shuffleArray<T>(array: T[]): T[] {
+  const shuffled = [...array];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
+}
+
+const shuffledWords = shuffleArray(pronunciationWords);
 
 export default function PronunciationPage() {
   const router = useRouter();
@@ -32,7 +34,7 @@ export default function PronunciationPage() {
   const voiceSynth = new VoiceSynthesizer();
   const speechRecognizer = new SpeechRecognizer();
   
-  const currentWord = pronunciationWords[currentWordIndex];
+  const currentWord = shuffledWords[currentWordIndex];
 
   const speakWord = async () => {
     await voiceSynth.speak(`Listen carefully. ${currentWord.word}. Now you try saying ${currentWord.word}`);
@@ -71,13 +73,16 @@ export default function PronunciationPage() {
       
       setTimeout(() => {
         setShowCelebration(false);
-        if (currentWordIndex < pronunciationWords.length - 1) {
-          setCurrentWordIndex(currentWordIndex + 1);
-          setScore(0);
-          setFeedback('');
-        } else {
-          router.push('/dashboard');
-        }
+        const handleNext = () => {
+          if (currentWordIndex < shuffledWords.length - 1) {
+            setCurrentWordIndex(currentWordIndex + 1);
+            setFeedback('');
+            setScore(0);
+          } else {
+            router.push('/dashboard');
+          }
+        };
+        handleNext();
       }, 3000);
     } else if (pronunciationScore >= 60) {
       setFeedback('Good try! Let us practice once more.');

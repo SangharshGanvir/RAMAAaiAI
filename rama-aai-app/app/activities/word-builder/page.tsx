@@ -8,12 +8,25 @@ import WordBuilderGame from '@/games/WordBuilderGame';
 import CelebrationAnimation from '@/components/CelebrationAnimation';
 
 const allWords = [
-  // Easy 3-letter words
-  'cat', 'dog', 'sun', 'bat', 'hat', 'pen',
-  // Medium 4-letter words
-  'moon', 'tree', 'book', 'ball', 'home', 'fish', 'bird', 'frog',
-  // Harder 5+ letter words
-  'apple', 'house', 'water', 'happy', 'smile', 'friend', 'flower', 'garden'
+  // Easy 3-letter words (30 words)
+  'cat', 'dog', 'sun', 'bat', 'hat', 'pen', 'cup', 'box', 'fox', 'ant',
+  'bee', 'car', 'bus', 'egg', 'ice', 'jam', 'key', 'leg', 'map', 'net',
+  'owl', 'pig', 'rat', 'sea', 'tea', 'van', 'web', 'zoo', 'arm', 'bed',
+  
+  // Medium 4-letter words (40 words)
+  'moon', 'tree', 'book', 'ball', 'home', 'fish', 'bird', 'frog', 'duck', 'goat',
+  'bear', 'lion', 'star', 'rain', 'snow', 'wind', 'fire', 'door', 'hand', 'foot',
+  'head', 'nose', 'eyes', 'ears', 'hair', 'face', 'neck', 'back', 'knee', 'toes',
+  'milk', 'cake', 'rice', 'soup', 'meat', 'corn', 'bean', 'pear', 'plum', 'lime',
+  
+  // Harder 5-letter words (30 words)
+  'apple', 'house', 'water', 'happy', 'smile', 'bread', 'chair', 'table', 'plant', 'cloud',
+  'grass', 'beach', 'ocean', 'river', 'stone', 'horse', 'sheep', 'tiger', 'zebra', 'snake',
+  'whale', 'eagle', 'robin', 'daisy', 'tulip', 'lemon', 'peach', 'grape', 'melon', 'mango',
+  
+  // Advanced 6+ letter words (20 words)
+  'friend', 'flower', 'garden', 'rabbit', 'turtle', 'monkey', 'giraffe', 'elephant', 'dolphin', 'penguin',
+  'rainbow', 'thunder', 'mountain', 'butterfly', 'dragonfly', 'strawberry', 'pineapple', 'watermelon', 'chocolate', 'umbrella'
 ];
 
 function shuffleArray<T>(array: T[]): T[] {

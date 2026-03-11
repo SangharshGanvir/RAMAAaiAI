@@ -1,5 +1,5 @@
-import OpenAI from 'openai';
 import { Story } from '@/types';
+import OpenAI from 'openai';
 
 const openai = new OpenAI({
   apiKey: process.env.NEXT_PUBLIC_OPENAI_API_KEY,
@@ -193,7 +193,332 @@ function getDefaultStories(): Story[] {
       difficulty: 'easy',
       question: 'What comes out at night?'
     },
-    // MEDIUM STORIES (10 stories)
+    {
+      id: 'story-easy-11',
+      title: '🐝 The Busy Bee',
+      content: [
+        '🐝 A little bee flies from flower to flower.',
+        '🌸 The bee collects sweet nectar.',
+        '🍯 It makes yummy honey.',
+        '😊 The bee works hard every day.'
+      ],
+      moral: 'Hard work brings sweet rewards.',
+      difficulty: 'easy',
+      question: 'What does the bee make?'
+    },
+    {
+      id: 'story-easy-12',
+      title: '🎈 The Red Balloon',
+      content: [
+        '🎈 A red balloon floats in the sky.',
+        '☁️ It goes up, up, up.',
+        '👋 A child waves goodbye.',
+        '😊 The balloon is free and happy.'
+      ],
+      moral: 'Sometimes letting go brings happiness.',
+      difficulty: 'easy',
+      question: 'What color is the balloon?'
+    },
+    {
+      id: 'story-easy-13',
+      title: '🐸 The Jumping Frog',
+      content: [
+        '🐸 A green frog sits on a lily pad.',
+        '💦 It jumps into the water.',
+        '🎵 The frog says ribbit, ribbit.',
+        '🌊 It swims and plays all day.'
+      ],
+      moral: 'Playing keeps us healthy and happy.',
+      difficulty: 'easy',
+      question: 'What sound does the frog make?'
+    },
+    {
+      id: 'story-easy-14',
+      title: '🎂 Birthday Party',
+      content: [
+        '🎂 Today is my birthday.',
+        '🎈 There are balloons everywhere.',
+        '🎁 I get many presents.',
+        '😄 I am so happy today.'
+      ],
+      moral: 'Special days bring joy.',
+      difficulty: 'easy',
+      question: 'What special day is it?'
+    },
+    {
+      id: 'story-easy-15',
+      title: '🌧️ The Rain',
+      content: [
+        '🌧️ Rain falls from the sky.',
+        '💧 It makes puddles on the ground.',
+        '👢 I wear my rain boots.',
+        '😊 I love to jump in puddles.'
+      ],
+      moral: 'Rainy days can be fun too.',
+      difficulty: 'easy',
+      question: 'What do you wear in the rain?'
+    },
+    {
+      id: 'story-easy-16',
+      title: '🦆 The Duck Family',
+      content: [
+        '🦆 A mother duck swims in the pond.',
+        '🐥 Five baby ducks follow her.',
+        '🌊 They swim in a line.',
+        '❤️ The mother duck loves her babies.'
+      ],
+      moral: 'Families stay together.',
+      difficulty: 'easy',
+      question: 'How many baby ducks are there?'
+    },
+    {
+      id: 'story-easy-17',
+      title: '🍪 The Cookie',
+      content: [
+        '🍪 Mom bakes cookies in the oven.',
+        '🤤 They smell so good.',
+        '🥛 I drink milk with my cookie.',
+        '😋 It tastes delicious.'
+      ],
+      moral: 'Homemade treats are the best.',
+      difficulty: 'easy',
+      question: 'What does mom bake?'
+    },
+    {
+      id: 'story-easy-18',
+      title: '🚂 The Train Ride',
+      content: [
+        '🚂 The train goes choo choo.',
+        '🏞️ It passes trees and mountains.',
+        '👀 I look out the window.',
+        '😊 Train rides are fun.'
+      ],
+      moral: 'Journeys can be exciting.',
+      difficulty: 'easy',
+      question: 'What sound does the train make?'
+    },
+    {
+      id: 'story-easy-19',
+      title: '🎨 My Drawing',
+      content: [
+        '🎨 I draw with crayons.',
+        '🏠 I draw my house.',
+        '👨‍👩‍👧 I draw my family.',
+        '😊 My drawing is beautiful.'
+      ],
+      moral: 'Art shows our love.',
+      difficulty: 'easy',
+      question: 'What do you draw with?'
+    },
+    {
+      id: 'story-easy-20',
+      title: '🌟 The Wishing Star',
+      content: [
+        '🌟 I see a star at night.',
+        '🙏 I make a wish.',
+        '✨ The star twinkles bright.',
+        '💭 I hope my wish comes true.'
+      ],
+      moral: 'Hope keeps dreams alive.',
+      difficulty: 'easy',
+      question: 'What do you make on a star?'
+    },
+    {
+      id: 'story-easy-21',
+      title: '🐌 The Slow Snail',
+      content: [
+        '🐌 A snail moves very slowly.',
+        '🏠 It carries its house.',
+        '🌿 It crawls on leaves.',
+        '😊 Slow and steady is okay.'
+      ],
+      moral: 'Everyone moves at their own pace.',
+      difficulty: 'easy',
+      question: 'What does the snail carry?'
+    },
+    {
+      id: 'story-easy-22',
+      title: '🎵 The Music Box',
+      content: [
+        '🎵 I open the music box.',
+        '💃 A dancer spins around.',
+        '🎶 Pretty music plays.',
+        '😊 It makes me smile.'
+      ],
+      moral: 'Music brings joy.',
+      difficulty: 'easy',
+      question: 'What spins in the music box?'
+    },
+    {
+      id: 'story-easy-23',
+      title: '🌻 The Sunflower',
+      content: [
+        '🌻 A tall sunflower grows.',
+        '☀️ It faces the sun.',
+        '🐝 Bees visit the flower.',
+        '😊 The sunflower is happy.'
+      ],
+      moral: 'Always look toward the light.',
+      difficulty: 'easy',
+      question: 'What does the sunflower face?'
+    },
+    {
+      id: 'story-easy-24',
+      title: '🧸 My Teddy Bear',
+      content: [
+        '🧸 I have a soft teddy bear.',
+        '🛏️ It sleeps with me at night.',
+        '🤗 I hug it tight.',
+        '❤️ My teddy is my friend.'
+      ],
+      moral: 'Comfort comes from things we love.',
+      difficulty: 'easy',
+      question: 'Where does the teddy sleep?'
+    },
+    {
+      id: 'story-easy-25',
+      title: '🍦 Ice Cream Day',
+      content: [
+        '🍦 It is a hot summer day.',
+        '😋 I eat ice cream.',
+        '🍓 It is strawberry flavor.',
+        '😊 Ice cream is yummy.'
+      ],
+      moral: 'Sweet treats make hot days better.',
+      difficulty: 'easy',
+      question: 'What flavor is the ice cream?'
+    },
+    {
+      id: 'story-easy-26',
+      title: '🦋 The Colorful Butterfly',
+      content: [
+        '🦋 A butterfly has pretty wings.',
+        '🌈 Its wings are many colors.',
+        '🌸 It lands on a flower.',
+        '✨ The butterfly is beautiful.'
+      ],
+      moral: 'Beauty comes in many colors.',
+      difficulty: 'easy',
+      question: 'Where does the butterfly land?'
+    },
+    {
+      id: 'story-easy-27',
+      title: '🎪 The Circus Clown',
+      content: [
+        '🤡 A funny clown makes me laugh.',
+        '🎈 The clown has balloons.',
+        '😂 The clown does silly tricks.',
+        '😊 The circus is fun.'
+      ],
+      moral: 'Laughter is good medicine.',
+      difficulty: 'easy',
+      question: 'What does the clown have?'
+    },
+    {
+      id: 'story-easy-28',
+      title: '🌊 The Beach',
+      content: [
+        '🏖️ I go to the beach.',
+        '🏖️ I build a sandcastle.',
+        '🌊 Waves splash on my feet.',
+        '😊 The beach is wonderful.'
+      ],
+      moral: 'Nature is a playground.',
+      difficulty: 'easy',
+      question: 'What do you build at the beach?'
+    },
+    {
+      id: 'story-easy-29',
+      title: '🎃 The Pumpkin',
+      content: [
+        '🎃 A big orange pumpkin grows.',
+        '🌱 It grows in the garden.',
+        '😊 I carve a happy face.',
+        '🕯️ I put a candle inside.'
+      ],
+      moral: 'We can create joy from simple things.',
+      difficulty: 'easy',
+      question: 'What color is the pumpkin?'
+    },
+    {
+      id: 'story-easy-30',
+      title: '🚀 The Rocket Ship',
+      content: [
+        '🚀 A rocket flies to space.',
+        '⭐ It passes many stars.',
+        '🌙 It goes to the moon.',
+        '😊 Space is amazing.'
+      ],
+      moral: 'Dreams can take us far.',
+      difficulty: 'easy',
+      question: 'Where does the rocket go?'
+    },
+    {
+      id: 'story-easy-31',
+      title: '🐿️ The Squirrel',
+      content: [
+        '🐿️ A squirrel finds an acorn.',
+        '🌰 It hides the acorn.',
+        '🌳 The squirrel climbs a tree.',
+        '😊 The squirrel is clever.'
+      ],
+      moral: 'Planning ahead is wise.',
+      difficulty: 'easy',
+      question: 'What does the squirrel find?'
+    },
+    {
+      id: 'story-easy-32',
+      title: '🎁 Sharing Toys',
+      content: [
+        '🧸 I have many toys.',
+        '👦 My friend comes to play.',
+        '🤝 I share my toys.',
+        '😊 We both have fun.'
+      ],
+      moral: 'Sharing makes everyone happy.',
+      difficulty: 'easy',
+      question: 'What do you share?'
+    },
+    {
+      id: 'story-easy-33',
+      title: '🌲 The Pine Tree',
+      content: [
+        '🌲 A pine tree is green.',
+        '❄️ It stays green in winter.',
+        '🎄 Birds live in the tree.',
+        '😊 The tree is strong.'
+      ],
+      moral: 'Strength helps us through hard times.',
+      difficulty: 'easy',
+      question: 'What color is the pine tree?'
+    },
+    {
+      id: 'story-easy-34',
+      title: '🎸 The Guitar',
+      content: [
+        '🎸 I play the guitar.',
+        '🎵 It makes music.',
+        '🎶 I sing a song.',
+        '😊 Music is fun.'
+      ],
+      moral: 'Making music brings happiness.',
+      difficulty: 'easy',
+      question: 'What instrument do you play?'
+    },
+    {
+      id: 'story-easy-35',
+      title: '🦉 The Wise Owl',
+      content: [
+        '🦉 An owl sits in a tree.',
+        '🌙 It comes out at night.',
+        '👀 It has big eyes.',
+        '😊 The owl is wise.'
+      ],
+      moral: 'Wisdom comes with watching and learning.',
+      difficulty: 'easy',
+      question: 'When does the owl come out?'
+    },
+    // MEDIUM STORIES (35 stories)
     {
       id: 'story-medium-1',
       title: '🐦 The Little Bird',
@@ -519,16 +844,23 @@ export async function generateStoryLibrary(count: number = 5): Promise<Story[]> 
 }
 
 export function getAllStories(): Story[] {
-  return getDefaultStories();
+  const defaultStories = getDefaultStories();
+  // Import additional stories dynamically
+  try {
+    const { additionalStories } = require('@/data/additionalStories');
+    return [...defaultStories, ...additionalStories];
+  } catch {
+    return defaultStories;
+  }
 }
 
 export function getStoriesByDifficulty(difficulty: 'easy' | 'medium' | 'hard'): Story[] {
-  const allStories = getDefaultStories();
+  const allStories = getAllStories();
   return allStories.filter(s => s.difficulty === difficulty);
 }
 
 export function getStoryById(id: string): Story | null {
-  const allStories = getDefaultStories();
+  const allStories = getAllStories();
   return allStories.find(s => s.id === id) || null;
 }
 

@@ -18,7 +18,8 @@ export default function DashboardPage() {
     { id: 'pronunciation', title: 'Pronunciation', emoji: '🗣️', path: '/activities/pronunciation' },
     { id: 'sentences', title: 'Sentence Builder', emoji: '✍️', path: '/activities/sentence-builder' },
     { id: 'listening', title: 'Listening Game', emoji: '👂', path: '/activities/listening' },
-    { id: 'stories', title: 'Story Time', emoji: '📖', path: '/stories' },
+    { id: 'dictionary', title: 'Word Dictionary', emoji: '📖', path: '/dictionary' },
+    { id: 'stories', title: 'Story Time', emoji: '�', path: '/stories' },
     { id: 'conversation', title: 'Ask Rama Aai', emoji: '💬', path: '/conversation' },
     { id: 'rewards', title: 'My Rewards', emoji: '🏆', path: '/rewards' },
   ];

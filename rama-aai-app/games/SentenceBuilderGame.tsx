@@ -72,13 +72,14 @@ export default function SentenceBuilderGame({ sentence, onComplete }: SentenceBu
       {selectedWords.length === words.length && (
         <motion.button
           onClick={checkAnswer}
-          className="px-8 py-4 bg-green-500 text-white text-xl font-bold rounded-full"
+          className="px-8 py-4 bg-green-500 text-white text-xl font-bold rounded-full shadow-lg"
+          style={{ color: '#ffffff' }}
           whileHover={buttonHover}
           whileTap={buttonTap}
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
         >
-          Check Answer ✓
+          <span className="text-white">Check Answer ✓</span>
         </motion.button>
       )}
     </div>
