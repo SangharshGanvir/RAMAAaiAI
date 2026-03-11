@@ -93,7 +93,7 @@ export default function SettingsPage() {
                 {AVATAR_OPTIONS.backgroundThemes.map((theme) => (
                   <motion.button
                     key={theme.id}
-                    onClick={() => setLocalAvatar({ ...localAvatar, backgroundTheme: theme.id })}
+                    onClick={() => setLocalAvatar({ ...localAvatar, backgroundTheme: theme.id as 'garden' | 'library' | 'classroom' | 'nature' })}
                     className={`p-6 rounded-lg border-2 ${
                       localAvatar.backgroundTheme === theme.id
                         ? 'border-primary bg-orange-50'
