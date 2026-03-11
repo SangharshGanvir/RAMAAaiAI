@@ -13,6 +13,7 @@ interface ListeningGameProps {
 
 export default function ListeningGame({ word, images, onComplete }: ListeningGameProps) {
   const [hasPlayed, setHasPlayed] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false);
   const voiceSynth = new VoiceSynthesizer();
 
   useEffect(() => {
@@ -20,16 +21,23 @@ export default function ListeningGame({ word, images, onComplete }: ListeningGam
   }, []);
 
   const playWord = async () => {
+    setIsPlaying(true);
     await voiceSynth.speak(`Listen carefully. ${word}`);
     setHasPlayed(true);
+    setIsPlaying(false);
   };
 
-  const handleImageClick = (selectedWord: string) => {
+  const handleImageClick = async (selectedWord: string) => {
+    if (isPlaying) return;
+    
+    setIsPlaying(true);
     if (selectedWord === word) {
-      voiceSynth.speak('Wonderful! That is correct!');
+      await voiceSynth.speak('Wonderful! That is correct!');
+      setIsPlaying(false);
       onComplete(100);
     } else {
-      voiceSynth.speak('Try again, my dear.');
+      await voiceSynth.speak('Try again, my dear.');
+      setIsPlaying(false);
     }
   };
 
@@ -39,11 +47,16 @@ export default function ListeningGame({ word, images, onComplete }: ListeningGam
       
       <motion.button
         onClick={playWord}
-        className="px-6 py-3 bg-blue-500 text-white rounded-full font-medium text-lg"
-        whileHover={buttonHover}
-        whileTap={buttonTap}
+        disabled={isPlaying}
+        className={`px-6 py-3 rounded-full font-medium text-lg ${
+          isPlaying 
+            ? 'bg-gray-300 text-gray-600 cursor-not-allowed' 
+            : 'bg-blue-500 text-white'
+        }`}
+        whileHover={!isPlaying ? buttonHover : {}}
+        whileTap={!isPlaying ? buttonTap : {}}
       >
-        🔊 Play Word
+        {isPlaying ? '⏸️ Playing...' : '🔊 Play Word'}
       </motion.button>
 
       {hasPlayed && (
@@ -52,9 +65,14 @@ export default function ListeningGame({ word, images, onComplete }: ListeningGam
             <motion.button
               key={index}
               onClick={() => handleImageClick(image.word)}
-              className="flex flex-col items-center gap-3 p-6 bg-white rounded-xl shadow-lg border-4 border-transparent hover:border-primary"
-              whileHover={buttonHover}
-              whileTap={buttonTap}
+              disabled={isPlaying}
+              className={`flex flex-col items-center gap-3 p-6 rounded-xl shadow-lg border-4 ${
+                isPlaying
+                  ? 'bg-gray-100 border-gray-300 cursor-not-allowed opacity-50'
+                  : 'bg-white border-transparent hover:border-primary'
+              }`}
+              whileHover={!isPlaying ? buttonHover : {}}
+              whileTap={!isPlaying ? buttonTap : {}}
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: index * 0.1 }}

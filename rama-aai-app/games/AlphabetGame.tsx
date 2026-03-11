@@ -17,6 +17,7 @@ export default function AlphabetGame({ letter, onComplete }: AlphabetGameProps) 
   const [isListening, setIsListening] = useState(false);
   const [feedback, setFeedback] = useState('');
   const [score, setScore] = useState(0);
+  const [isPlaying, setIsPlaying] = useState(false);
   const voiceSynth = new VoiceSynthesizer();
   const speechRecognizer = new SpeechRecognizer();
 
@@ -25,7 +26,9 @@ export default function AlphabetGame({ letter, onComplete }: AlphabetGameProps) 
   }, [letter]);
 
   const speakLetter = async () => {
+    setIsPlaying(true);
     await voiceSynth.speak(`The letter ${letter}. Can you say ${letter}?`);
+    setIsPlaying(false);
   };
 
   const handleStartListening = () => {
@@ -53,17 +56,21 @@ export default function AlphabetGame({ letter, onComplete }: AlphabetGameProps) 
     const pronunciationScore = calculatePronunciationScore(spokenText, letter);
     setScore(pronunciationScore);
 
+    setIsPlaying(true);
     if (pronunciationScore >= 80) {
       setFeedback('Wonderful! You said it perfectly! ⭐');
       await voiceSynth.speak('Wonderful! You said it perfectly!');
+      setIsPlaying(false);
       addLetterLearned(letter);
       setTimeout(() => onComplete(pronunciationScore), 2000);
     } else if (pronunciationScore >= 50) {
       setFeedback('Very good! Let us try once more.');
       await voiceSynth.speak('Very good! Let us try once more.');
+      setIsPlaying(false);
     } else {
       setFeedback('Let us say it slowly together.');
       await voiceSynth.speak(`Let us say it slowly together. ${letter}`);
+      setIsPlaying(false);
     }
   };
 
@@ -84,20 +91,32 @@ export default function AlphabetGame({ letter, onComplete }: AlphabetGameProps) 
 
       <motion.button
         onClick={speakLetter}
-        className="px-6 py-3 bg-blue-500 text-white rounded-full font-medium"
-        whileHover={buttonHover}
-        whileTap={buttonTap}
+        disabled={isPlaying || isListening}
+        className={`px-6 py-3 rounded-full font-medium ${
+          isPlaying || isListening
+            ? 'bg-gray-300 text-gray-600 cursor-not-allowed'
+            : 'bg-blue-500 text-white'
+        }`}
+        whileHover={!isPlaying && !isListening ? buttonHover : {}}
+        whileTap={!isPlaying && !isListening ? buttonTap : {}}
       >
-        🔊 Hear the letter
+        {isPlaying ? '⏸️ Playing...' : '🔊 Hear the letter'}
       </motion.button>
 
       <div className="flex flex-col items-center gap-4">
         <p className="text-lg font-medium">Now you try!</p>
-        <VoiceButton
-          onStartListening={handleStartListening}
-          onStopListening={handleStopListening}
-          isListening={isListening}
-        />
+        {!isPlaying && (
+          <VoiceButton
+            onStartListening={handleStartListening}
+            onStopListening={handleStopListening}
+            isListening={isListening}
+          />
+        )}
+        {isPlaying && (
+          <div className="w-20 h-20 rounded-full bg-gray-300 flex items-center justify-center text-4xl">
+            ⏸️
+          </div>
+        )}
       </div>
 
       {feedback && (

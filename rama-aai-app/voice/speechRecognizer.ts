@@ -1,6 +1,7 @@
 export class SpeechRecognizer {
   private recognition: any;
   private isListening: boolean = false;
+  private timeoutId: NodeJS.Timeout | null = null;
 
   constructor() {
     if (typeof window !== 'undefined') {
@@ -21,11 +22,22 @@ export class SpeechRecognizer {
       return;
     }
 
-    if (this.isListening) return;
+    if (this.isListening) {
+      this.stopListening();
+    }
 
     this.isListening = true;
 
+    // Set a 10-second timeout to prevent infinite listening
+    this.timeoutId = setTimeout(() => {
+      if (this.isListening) {
+        this.stopListening();
+        onError?.('Listening timeout. Please try again!');
+      }
+    }, 10000);
+
     this.recognition.onresult = (event: any) => {
+      this.clearListeningTimeout();
       const transcript = event.results[0][0].transcript;
       if (transcript && transcript.trim().length > 0) {
         onResult(transcript);
@@ -37,6 +49,7 @@ export class SpeechRecognizer {
 
     this.recognition.onerror = (event: any) => {
       console.error('Speech recognition error:', event.error);
+      this.clearListeningTimeout();
       this.isListening = false;
       
       // Provide user-friendly error messages
@@ -53,12 +66,16 @@ export class SpeechRecognizer {
         case 'network':
           onError?.('Network error. Please check your internet connection.');
           break;
+        case 'aborted':
+          // Don't show error for manual stops
+          break;
         default:
           onError?.('Could not hear you. Try again!');
       }
     };
 
     this.recognition.onend = () => {
+      this.clearListeningTimeout();
       this.isListening = false;
     };
 
@@ -66,12 +83,21 @@ export class SpeechRecognizer {
       this.recognition.start();
     } catch (error) {
       console.error('Error starting recognition:', error);
+      this.clearListeningTimeout();
       this.isListening = false;
       onError?.('Failed to start listening. Please try again.');
     }
   }
 
+  private clearListeningTimeout(): void {
+    if (this.timeoutId) {
+      clearTimeout(this.timeoutId);
+      this.timeoutId = null;
+    }
+  }
+
   stopListening(): void {
+    this.clearListeningTimeout();
     if (this.recognition && this.isListening) {
       this.recognition.stop();
       this.isListening = false;

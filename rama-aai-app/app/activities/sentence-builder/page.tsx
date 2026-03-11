@@ -11,11 +11,24 @@ export default function SentenceBuilderPage() {
   const router = useRouter();
   const [showCelebration, setShowCelebration] = useState(false);
   const sentences = [
+    // Simple present tense
     'I am happy',
     'The cat runs',
     'I like books',
     'The sun is bright',
-    'Birds can fly'
+    'Birds can fly',
+    // More complex sentences
+    'My friend is kind',
+    'We play together',
+    'The flowers are beautiful',
+    'I love my family',
+    'The moon shines at night',
+    // Action sentences
+    'The dog jumps high',
+    'I eat healthy food',
+    'We learn new things',
+    'The tree grows tall',
+    'I help my friends'
   ];
   const [currentSentenceIndex, setCurrentSentenceIndex] = useState(0);
 

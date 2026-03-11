@@ -39,6 +39,11 @@ export async function generateResponse(
   conversationHistory: Array<{ role: string; content: string }> = []
 ): Promise<string> {
   try {
+    // Check if API key is available
+    if (!process.env.NEXT_PUBLIC_OPENAI_API_KEY) {
+      return getFallbackResponse(userMessage);
+    }
+
     const messages: any[] = [
       { role: 'system', content: RAMA_AAI_PERSONALITY },
       ...conversationHistory.slice(-6),
@@ -53,7 +58,7 @@ export async function generateResponse(
     });
 
     let reply = response.choices[0]?.message?.content || 
-      "I'm here to help you learn! What would you like to know?";
+      getFallbackResponse(userMessage);
 
     const sentences = reply.split(/[.!?]+/).filter(s => s.trim());
     if (sentences.length > 3) {
@@ -63,8 +68,32 @@ export async function generateResponse(
     return reply;
   } catch (error) {
     console.error('OpenAI API error:', error);
-    return "I'm having trouble right now, my dear. Let's try again in a moment!";
+    return getFallbackResponse(userMessage);
   }
+}
+
+function getFallbackResponse(userMessage: string): string {
+  const lowerMessage = userMessage.toLowerCase();
+  
+  // Learning-related responses
+  if (lowerMessage.includes('letter') || lowerMessage.includes('alphabet')) {
+    return "Letters are so much fun to learn! Would you like to practice the alphabet with me? 🔤";
+  }
+  if (lowerMessage.includes('word') || lowerMessage.includes('spell')) {
+    return "Words are like building blocks! Let's practice some words together. What word would you like to learn? 📝";
+  }
+  if (lowerMessage.includes('story') || lowerMessage.includes('read')) {
+    return "I love stories! Would you like me to read you a story? We have many wonderful stories to choose from. 📖";
+  }
+  if (lowerMessage.includes('how are you') || lowerMessage.includes('hello') || lowerMessage.includes('hi')) {
+    return "Hello my dear child! I am very happy to see you today. What would you like to learn? 😊";
+  }
+  if (lowerMessage.includes('help') || lowerMessage.includes('learn')) {
+    return "I'm here to help you learn! We can practice letters, words, or read stories together. What sounds fun? ✨";
+  }
+  
+  // Default encouraging response
+  return "That's a wonderful question! I'm here to help you learn new things. Would you like to practice letters, words, or hear a story? 💕";
 }
 
 export function filterUnsafeContent(message: string): boolean {

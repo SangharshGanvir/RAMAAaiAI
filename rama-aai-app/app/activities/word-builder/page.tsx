@@ -1,17 +1,39 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useRouter } from 'next/navigation';
 import { pageTransition } from '@/utils/animations';
 import WordBuilderGame from '@/games/WordBuilderGame';
 import CelebrationAnimation from '@/components/CelebrationAnimation';
 
+const allWords = [
+  // Easy 3-letter words
+  'cat', 'dog', 'sun', 'bat', 'hat', 'pen',
+  // Medium 4-letter words
+  'moon', 'tree', 'book', 'ball', 'home', 'fish', 'bird', 'frog',
+  // Harder 5+ letter words
+  'apple', 'house', 'water', 'happy', 'smile', 'friend', 'flower', 'garden'
+];
+
+function shuffleArray<T>(array: T[]): T[] {
+  const shuffled = [...array];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
+}
+
 export default function WordBuilderPage() {
   const router = useRouter();
   const [showCelebration, setShowCelebration] = useState(false);
-  const words = ['cat', 'dog', 'sun', 'moon', 'tree', 'book', 'ball', 'home'];
+  const [words, setWords] = useState<string[]>([]);
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
+
+  useEffect(() => {
+    setWords(shuffleArray(allWords));
+  }, []);
 
   const handleComplete = () => {
     setShowCelebration(true);
@@ -45,10 +67,12 @@ export default function WordBuilderPage() {
         </div>
 
         <div className="bg-white rounded-2xl p-8 card-shadow-lg">
-          <WordBuilderGame 
-            word={words[currentWordIndex]} 
-            onComplete={handleComplete} 
-          />
+          {words.length > 0 && (
+            <WordBuilderGame 
+              word={words[currentWordIndex]} 
+              onComplete={handleComplete} 
+            />
+          )}
         </div>
       </div>
     </motion.div>
