@@ -16,7 +16,7 @@ export class SpeechRecognizer {
 
   startListening(onResult: (text: string) => void, onError?: (error: string) => void): void {
     if (!this.recognition) {
-      onError?.('Speech recognition not supported');
+      onError?.('Speech recognition not supported in this browser. Please use Chrome or Edge.');
       return;
     }
 
@@ -26,14 +26,35 @@ export class SpeechRecognizer {
 
     this.recognition.onresult = (event: any) => {
       const transcript = event.results[0][0].transcript;
-      onResult(transcript);
+      if (transcript && transcript.trim().length > 0) {
+        onResult(transcript);
+      } else {
+        onError?.('Could not hear you clearly. Please try again!');
+      }
       this.isListening = false;
     };
 
     this.recognition.onerror = (event: any) => {
       console.error('Speech recognition error:', event.error);
-      onError?.(event.error);
       this.isListening = false;
+      
+      // Provide user-friendly error messages
+      switch (event.error) {
+        case 'no-speech':
+          onError?.('Could not hear you. Please speak clearly and try again!');
+          break;
+        case 'audio-capture':
+          onError?.('Microphone not found. Please check your microphone connection.');
+          break;
+        case 'not-allowed':
+          onError?.('Microphone permission denied. Please allow microphone access.');
+          break;
+        case 'network':
+          onError?.('Network error. Please check your internet connection.');
+          break;
+        default:
+          onError?.('Could not hear you. Try again!');
+      }
     };
 
     this.recognition.onend = () => {
@@ -45,7 +66,7 @@ export class SpeechRecognizer {
     } catch (error) {
       console.error('Error starting recognition:', error);
       this.isListening = false;
-      onError?.('Failed to start listening');
+      onError?.('Failed to start listening. Please try again.');
     }
   }
 

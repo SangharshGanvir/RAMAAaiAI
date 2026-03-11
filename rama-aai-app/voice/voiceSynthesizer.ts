@@ -30,18 +30,28 @@ export class VoiceSynthesizer {
 
       const utterance = new SpeechSynthesisUtterance(text);
       
+      // Prioritize female voices that sound like a grandmother
       const femaleVoice = this.voices.find(voice => 
-        voice.name.includes('Female') || 
-        voice.name.includes('Samantha') ||
-        voice.name.includes('Victoria')
-      );
+        voice.lang.startsWith('en') && (
+          voice.name.toLowerCase().includes('female') || 
+          voice.name.toLowerCase().includes('woman') ||
+          voice.name.toLowerCase().includes('samantha') ||
+          voice.name.toLowerCase().includes('victoria') ||
+          voice.name.toLowerCase().includes('karen') ||
+          voice.name.toLowerCase().includes('moira') ||
+          voice.name.toLowerCase().includes('fiona') ||
+          voice.name.toLowerCase().includes('zira') ||
+          voice.name.toLowerCase().includes('hazel')
+        )
+      ) || this.voices.find(voice => voice.lang.startsWith('en'));
       
       if (femaleVoice) {
         utterance.voice = femaleVoice;
       }
 
-      utterance.rate = options?.rate || 0.9;
-      utterance.pitch = options?.pitch || 1.1;
+      // Slower rate and slightly higher pitch for grandmother voice
+      utterance.rate = options?.rate || 0.85;
+      utterance.pitch = options?.pitch || 1.15;
       utterance.volume = options?.volume || 1.0;
 
       utterance.onend = () => resolve();
