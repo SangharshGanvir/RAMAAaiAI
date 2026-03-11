@@ -518,6 +518,15 @@ export async function generateStoryLibrary(count: number = 5): Promise<Story[]> 
   return stories;
 }
 
+export function getAllStories(): Story[] {
+  return getDefaultStories();
+}
+
+export function getStoriesByDifficulty(difficulty: 'easy' | 'medium' | 'hard'): Story[] {
+  const allStories = getDefaultStories();
+  return allStories.filter(s => s.difficulty === difficulty);
+}
+
 export function getStoryByDifficulty(difficulty: 'easy' | 'medium' | 'hard'): Story {
   const topics = {
     easy: 'bunny',

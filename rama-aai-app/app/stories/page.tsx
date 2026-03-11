@@ -5,31 +5,15 @@ import { motion } from 'framer-motion';
 import { useRouter } from 'next/navigation';
 import { pageTransition, scaleIn, buttonHover, buttonTap } from '@/utils/animations';
 import { Story } from '@/types';
-import { getStoryByDifficulty } from '@/ai/storyGenerator';
+import { getAllStories } from '@/ai/storyGenerator';
 
 export default function StoryLibraryPage() {
   const router = useRouter();
   const [stories, setStories] = useState<Story[]>([]);
 
   useEffect(() => {
-    // Get all stories from the story generator
-    const allStories: Story[] = [];
-    
-    // Get 10 easy stories
-    for (let i = 1; i <= 10; i++) {
-      allStories.push(getStoryByDifficulty('easy'));
-    }
-    
-    // Get 10 medium stories
-    for (let i = 1; i <= 10; i++) {
-      allStories.push(getStoryByDifficulty('medium'));
-    }
-    
-    // Get 10 hard stories
-    for (let i = 1; i <= 10; i++) {
-      allStories.push(getStoryByDifficulty('hard'));
-    }
-    
+    // Get all 30 unique stories
+    const allStories = getAllStories();
     setStories(allStories);
   }, []);
 
