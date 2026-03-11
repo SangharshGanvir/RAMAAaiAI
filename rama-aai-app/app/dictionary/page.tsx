@@ -227,7 +227,7 @@ export default function DictionaryPage() {
 
                 <div>
                   <h3 className="text-xl font-bold text-gray-800 mb-2">💡 Example:</h3>
-                  <p className="text-lg text-gray-700 italic leading-relaxed">"{selectedWord.example}"</p>
+                  <p className="text-lg text-gray-700 italic leading-relaxed">&ldquo;{selectedWord.example}&rdquo;</p>
                 </div>
 
                 {selectedWord.synonyms && selectedWord.synonyms.length > 0 && (
