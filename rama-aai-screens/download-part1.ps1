@@ -1,0 +1,7 @@
+﻿ = @(
+@{n='01-home-dashboard';i='https://lh3.googleusercontent.com/aida/AOfcidWv5ETFaiJeeoey5H9c2qGnpMgXv_TKQe9U1iK9Dak7xMZAMX-b-QPbaM9UIzzWLdArvqfV9rXCzJsqVtP8CwxbFbLbw7Up6ZcV3UDNZdVLG00URXbGl5JGRfTSZItzH8TG4tuq_cYoQWnYRtWFjqm_HBGwFfN-Uq4QsVB09-JdKZYn6lXhQ6QqUiIEvjA9PspAnukTzmg-eGW5KkAxKxWviCYhhTYDzunuYITjecZH4Va-Z2cXyX1RlLk'}
+@{n='02-learning-activity';i='https://lh3.googleusercontent.com/aida/AOfcidU0-7WhU1UF6vSIat2dgkRHDA-1fcXUrvynoXAA5EgrhQOyVDi2GcMt2scvkRmcyO2UTjPkcmZw3V5gFDFCSYgeiXwsxomnOP8YgBTy3cSL-uypypFvQ420s90PmxTG6MeZa8lpGBz3E0BVePv4xjWL4j7r47T_CadAZnm65ddNEpOMob6VyuuFJTKl8ukIGYB9INxKnTF9PX0O2uh0GxcRH20AIPRZrGqTDa5kij6rHzSPkIZKerYZMDg'}
+@{n='03-main-home-dashboard';i='https://lh3.googleusercontent.com/aida/AOfcidUTieIp3bccSkaZjtGLG8iY26RIYNjIToKqL-pb3eJjsUbA7mdkkhB5pPMZGaVSfaIAAUa0tOKwdUlQOem1BxVWejSliPf5NcFXI41y-gdVXQLds0gFsFHloLWTsH3s3te9u2is3o-VUxgmtUEch9phnQS3GbWlQy7HzIA1uqwuRwiVVG_epcQtzdzUvs6kjtBGOnn6ir0VJTS0r8XDiDM_4W4EyRGtk4R-JejMZrgJOc1IuEH4BsNaJyU'}
+@{n='04-welcome-screen';i='https://lh3.googleusercontent.com/aida/AOfcidUdySu6eAHltM9LV3gKIEloV3p7quLB5lzyM9lzx1wYmmx5430G7kqRr9JBVdtJySgErOp2DwaLwbOybdioWV9OZL_CZiETFfz0RaZ4sSoNcBpx_faI_sCFM51jHtomAblb7kQnx2jfUUOsZYCC_C1_ziaMBvGwLAu3avOhjhiKcOt6Bwoue8M94hkUUjVkQgtNvdR6cOyMgkDtZWvjO6BDBLOwJRBYj0QEeW3w3lfADBXbj0iXFLe8TA'}
+)
+foreach( in ){Invoke-WebRequest -Uri .i -OutFile "screenshots\.png";Write-Host "Downloaded "}

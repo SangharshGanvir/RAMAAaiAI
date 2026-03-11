@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>RAMA AAI - Learning Journey</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#ee5b2b",
+              "background-light": "#f8f6f6",
+              "background-dark": "#221510",
+            },
+            fontFamily: {
+              "display": ["Be Vietnam Pro"]
+            },
+            borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .journey-path {
+            background-image: radial-gradient(circle at 2px 2px, #ee5b2b20 1px, transparent 0);
+            background-size: 24px 24px;
+        }
+        .soft-glow {
+            box-shadow: 0 0 20px 5px rgba(238, 91, 43, 0.3);
+        }
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Background Decorative Shapes -->
+<div class="fixed top-20 -left-10 w-64 h-64 bg-primary/10 rounded-full blur-3xl -z-10"></div>
+<div class="fixed bottom-40 -right-10 w-80 h-80 bg-primary/5 rounded-full blur-3xl -z-10"></div>
+<div class="layout-container flex h-full grow flex-col items-center">
+<div class="w-full max-w-[480px] flex flex-col min-h-screen bg-white/50 dark:bg-background-dark/50 backdrop-blur-sm shadow-2xl border-x border-primary/5">
+<!-- Top Header -->
+<header class="flex items-center justify-between px-6 py-4 sticky top-0 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md z-20">
+<div class="flex items-center gap-3">
+<div class="p-2 bg-primary rounded-lg text-white">
+<span class="material-symbols-outlined text-2xl">school</span>
+</div>
+<h2 class="text-xl font-black tracking-tight text-slate-900 dark:text-slate-100 uppercase">RAMA AAI</h2>
+</div>
+<button class="flex items-center justify-center rounded-xl h-10 w-10 bg-primary/10 text-primary hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+</header>
+<!-- Title Section -->
+<div class="px-6 py-4">
+<h1 class="text-3xl font-black tracking-tight text-slate-900 dark:text-slate-100">Learning Journey</h1>
+</div>
+<!-- Rama Aai Message Bubble -->
+<div class="px-6 py-2 mb-8">
+<div class="flex items-end gap-4">
+<div class="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center shrink-0 border-2 border-primary/30 overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="Friendly illustrated character portrait with a warm smile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWqxXOdAPK_fvtmQ-hh7miFdYVH3EyK_dqQ9YEuiXTKmeUAH8xDRQnqy-a9X29rdIYNfSpO6vsJMjCjokX97Mf3e7mJdXGufwTdRrMmIE4Qw1ESSG5pHVB3Qxh0WV5xlRszeQ1KY6TRY_pZTV_hH4-1japm1wropHytea2nPIeHskrEJdiPHZ8FneIFjPtoREY7EVAUGsHVVii8M45DKfigaBnhrD3LqMWIWTr1m6CsBQxijGWydevlSSeJLea2nEtACWzkaJ37nY"/>
+</div>
+<div class="relative flex-1 bg-white dark:bg-slate-800 p-4 rounded-xl rounded-bl-none shadow-sm border border-primary/10">
+<p class="text-sm font-medium leading-relaxed">Every step makes you smarter!</p>
+<div class="absolute -bottom-2 -left-2 w-4 h-4 bg-white dark:bg-slate-800 rotate-45 border-b border-l border-primary/10"></div>
+</div>
+</div>
+</div>
+<!-- Main Journey Path Area -->
+<main class="flex-1 relative journey-path px-6 pb-24">
+<!-- Vertical Connector Line (Dashed) -->
+<div class="absolute left-1/2 -translate-x-1/2 top-0 bottom-24 w-1 border-l-4 border-dashed border-primary/20"></div>
+<!-- Milestone 1: Alphabet Explorer -->
+<div class="relative flex flex-col items-center mb-16">
+<div class="z-10 group cursor-pointer">
+<div class="w-24 h-24 rounded-full bg-white dark:bg-slate-800 border-4 border-primary flex flex-col items-center justify-center shadow-lg transform transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined text-4xl text-primary">spellcheck</span>
+<div class="flex gap-0.5 mt-1">
+<span class="material-symbols-outlined text-xs text-yellow-500" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined text-xs text-yellow-500" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined text-xs text-yellow-500" style="font-variation-settings: 'FILL' 1">star</span>
+</div>
+</div>
+</div>
+<div class="mt-3 text-center">
+<h3 class="font-bold text-slate-900 dark:text-slate-100">Alphabet Explorer</h3>
+<p class="text-xs font-semibold text-primary uppercase tracking-wider">Completed</p>
+</div>
+</div>
+<!-- Milestone 2: Word Builder (Active) -->
+<div class="relative flex flex-col items-center mb-16">
+<div class="z-10 group cursor-pointer floating">
+<div class="w-32 h-32 rounded-full bg-primary flex flex-col items-center justify-center soft-glow border-4 border-white dark:border-slate-800 transform transition-transform group-hover:scale-105">
+<span class="material-symbols-outlined text-5xl text-white">grid_view</span>
+<div class="mt-1 px-3 py-1 bg-white/20 rounded-full">
+<p class="text-[10px] font-bold text-white uppercase tracking-widest">Level 2</p>
+</div>
+</div>
+</div>
+<div class="mt-4 text-center">
+<h3 class="font-black text-lg text-slate-900 dark:text-slate-100">Word Builder</h3>
+<div class="flex items-center gap-2 mt-1">
+<div class="h-2 w-24 bg-primary/20 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-2/3"></div>
+</div>
+<span class="text-[10px] font-bold text-primary uppercase">65%</span>
+</div>
+</div>
+</div>
+<!-- Milestone 3: Sentence Maker (Locked) -->
+<div class="relative flex flex-col items-center mb-16 opacity-60">
+<div class="z-10">
+<div class="w-24 h-24 rounded-full bg-slate-200 dark:bg-slate-700 border-4 border-slate-300 dark:border-slate-600 flex flex-col items-center justify-center shadow-inner">
+<span class="material-symbols-outlined text-4xl text-slate-500">lock</span>
+</div>
+</div>
+<div class="mt-3 text-center">
+<h3 class="font-bold text-slate-600 dark:text-slate-400">Sentence Maker</h3>
+<p class="text-xs font-medium text-slate-500 italic">Locked</p>
+</div>
+</div>
+<!-- Milestone 4: Story Speaker (Locked) -->
+<div class="relative flex flex-col items-center mb-16 opacity-60">
+<div class="z-10">
+<div class="w-24 h-24 rounded-full bg-slate-200 dark:bg-slate-700 border-4 border-slate-300 dark:border-slate-600 flex flex-col items-center justify-center shadow-inner">
+<span class="material-symbols-outlined text-4xl text-slate-500">lock</span>
+</div>
+</div>
+<div class="mt-3 text-center">
+<h3 class="font-bold text-slate-600 dark:text-slate-400">Story Speaker</h3>
+<p class="text-xs font-medium text-slate-500 italic">Locked</p>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 w-full max-w-[480px] bg-white/90 dark:bg-background-dark/90 backdrop-blur-xl border-t border-primary/10 px-6 py-3 flex justify-between items-center z-30">
+<a class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<div class="relative">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">auto_stories</span>
+<div class="absolute -top-1 -right-1 w-2 h-2 bg-primary rounded-full"></div>
+</div>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Learn</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">mic</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Speak</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">menu_book</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Stories</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Profile</span>
+</a>
+</nav>
+</div>
+</div>
+</div>
+</body></html>

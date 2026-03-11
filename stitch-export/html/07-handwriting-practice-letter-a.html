@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>RAMA AAI - Handwriting Practice</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ee5b2b",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221510",
+                        "pastel-mint": "#e8f5f1",
+                        "pastel-blue": "#e3f2fd",
+                    },
+                    fontFamily: {
+                        "display": ["Be Vietnam Pro", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .tracing-path {
+            stroke-dasharray: 10, 10;
+        }
+        .floating-shape {
+            position: absolute;
+            z-index: 0;
+            opacity: 0.4;
+        }
+    </style>
+</head>
+<body class="bg-pastel-mint dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen relative overflow-x-hidden">
+<!-- Floating Background Elements -->
+<div class="floating-shape top-20 left-10 text-primary/20">
+<span class="material-symbols-outlined !text-6xl">grade</span>
+</div>
+<div class="floating-shape top-40 right-20 text-blue-400/20">
+<span class="material-symbols-outlined !text-4xl">wb_sunny</span>
+</div>
+<div class="floating-shape bottom-40 left-20 text-yellow-400/20">
+<span class="material-symbols-outlined !text-5xl">auto_awesome</span>
+</div>
+<div class="relative flex flex-col min-h-screen max-w-md mx-auto bg-white/40 backdrop-blur-sm shadow-2xl">
+<!-- Header -->
+<header class="flex items-center justify-between px-6 py-4">
+<div class="flex items-center gap-2">
+<div class="bg-primary p-1.5 rounded-lg text-white">
+<span class="material-symbols-outlined block">draw</span>
+</div>
+<h1 class="text-xl font-bold tracking-tight text-slate-800">RAMA AAI</h1>
+</div>
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-white shadow-sm border border-slate-100">
+<span class="material-symbols-outlined text-slate-600">settings</span>
+</button>
+</header>
+<!-- Main Content -->
+<main class="flex-1 flex flex-col px-6 gap-6 pb-24">
+<!-- Letter Display -->
+<div class="text-center pt-4">
+<h2 class="text-6xl font-black text-primary drop-shadow-sm">A</h2>
+<p class="text-slate-500 font-medium mt-1">Trace the letter 'A'</p>
+</div>
+<!-- Tracing Canvas Card -->
+<div class="relative flex-1 min-h-[400px] bg-white rounded-xl shadow-xl shadow-primary/5 border-4 border-white flex items-center justify-center overflow-hidden">
+<!-- Grid background -->
+<div class="absolute inset-0 opacity-[0.03] pointer-events-none" style="background-image: radial-gradient(#000 1px, transparent 1px); background-size: 20px 20px;"></div>
+<!-- Tracing Guide SVG -->
+<svg class="w-full h-full max-w-[280px] text-slate-200" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="12" viewbox="0 0 200 240">
+<!-- Letter A Dotted Path -->
+<path class="tracing-path" d="M100 40 L40 200"></path>
+<path class="tracing-path" d="M100 40 L160 200"></path>
+<path class="tracing-path" d="M65 145 L135 145"></path>
+<!-- Directional Arrows -->
+<g class="text-primary/60" stroke-width="3">
+<path d="M100 30 L95 45 M100 30 L105 45" stroke="currentColor"></path> <!-- Top start point -->
+<circle cx="100" cy="40" fill="currentColor" r="4" stroke="none"></circle>
+<!-- Stroke 1 Arrow -->
+<path d="M65 120 L60 130 L70 130" fill="currentColor" transform="rotate(-15, 65, 120)"></path>
+<!-- Stroke 2 Arrow -->
+<path d="M135 120 L130 130 L140 130" fill="currentColor" transform="rotate(15, 135, 120)"></path>
+</g>
+</svg>
+<!-- Feedback Floating Avatar -->
+<div class="absolute bottom-4 right-4 flex items-end gap-2">
+<div class="bg-white px-4 py-2 rounded-xl rounded-br-none shadow-lg border border-primary/10 relative">
+<p class="text-sm font-bold text-slate-700">Wonderful writing!</p>
+<div class="absolute -top-4 -left-2 text-yellow-400">
+<span class="material-symbols-outlined !text-xl">colors_spark</span>
+</div>
+</div>
+<div class="relative">
+<div class="w-16 h-16 rounded-full border-4 border-white shadow-md overflow-hidden bg-primary/10">
+<img class="w-full h-full object-cover" data-alt="Portrait of a friendly grandmother AI character Rama Aai" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrwQslT06GLpZCncYRrfA3RPCju7TiznwGatJwcI8xBI2g38T-5WMCHYOZ43mcgTX1lRw7rgH_PvBKf6ht4c1K8Ai0suC0WNQ2LW3lUPQSqIsbMUSG3zm85Q4irfeLiQ677Hj7SexiPl-khLqbIgLAJMDgpPknO13GzueWO0aM3n-dIrwpNUMay4HwO3oUtdrr3YIwV2P6IqqArp0nc4qd1ouDBlOf3QvMBOf2ASgn1I4eIIW5YTcT1WbP073zPkxJI_7paBqWUuo"/>
+</div>
+<div class="absolute -top-1 -right-1 bg-yellow-400 text-white rounded-full p-0.5">
+<span class="material-symbols-outlined !text-xs">star</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="grid grid-cols-2 gap-4 mt-2">
+<button class="py-4 px-6 rounded-xl border-2 border-primary text-primary font-bold hover:bg-primary/5 transition-colors">
+                    Try Again
+                </button>
+<button class="py-4 px-6 rounded-xl bg-primary text-white font-bold shadow-lg shadow-primary/30 hover:scale-[1.02] transition-transform">
+                    Next Letter
+                </button>
+</div>
+</main>
+<!-- Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 max-w-md mx-auto bg-white border-t border-slate-100 px-4 py-3 flex justify-between items-center rounded-t-xl z-50">
+<button class="flex flex-col items-center gap-1 text-slate-400 group">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">Home</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined !fill-1">edit_note</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">Learn</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined">chat_bubble</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">Speak</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined">auto_stories</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">Stories</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">Profile</span>
+</button>
+</nav>
+</div>
+</body></html>

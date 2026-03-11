@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Rama Aai - Home Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ee5b2b",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221510",
+                    },
+                    fontFamily: {
+                        "display": ["Be Vietnam Pro"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .pastel-gradient {
+            background: linear-gradient(135deg, #fdfcfb 0%, #fef1ed 100%);
+        }
+        .neumorphic-card {
+            background: #f8f6f6;
+            box-shadow: 8px 8px 16px #e0dede, -8px -8px 16px #ffffff;
+        }
+        .neumorphic-inset {
+            background: #f8f6f6;
+            box-shadow: inset 4px 4px 8px #e0dede, inset -4px -4px 8px #ffffff;
+        }
+        .floating-star {
+            position: absolute;
+            color: #ee5b2b;
+            opacity: 0.2;
+        }
+    </style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen relative overflow-x-hidden">
+<div class="absolute top-10 left-10 floating-star">
+<span class="material-symbols-outlined text-4xl">star</span>
+</div>
+<div class="absolute top-40 right-10 floating-star">
+<span class="material-symbols-outlined text-2xl">star</span>
+</div>
+<div class="absolute bottom-40 left-20 floating-star">
+<span class="material-symbols-outlined text-3xl">star</span>
+</div>
+<div class="layout-container flex h-full grow flex-col max-w-[480px] mx-auto min-h-screen pb-24">
+<header class="flex items-center justify-between px-6 py-6 sticky top-0 bg-background-light/80 backdrop-blur-md z-10">
+<div class="flex items-center gap-2">
+<div class="bg-primary p-1.5 rounded-lg">
+<span class="material-symbols-outlined text-white text-xl">face_6</span>
+</div>
+<h2 class="text-xl font-bold tracking-tight text-slate-900">Rama Aai</h2>
+</div>
+<button class="neumorphic-card p-2 rounded-full text-primary flex items-center justify-center">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+</header>
+<main class="flex-1 px-6 flex flex-col items-center">
+<div class="mt-4 flex flex-col items-center gap-6">
+<div class="relative">
+<div class="neumorphic-card p-2 rounded-full">
+<div class="size-32 rounded-full overflow-hidden bg-primary/10 border-4 border-white">
+<img alt="Grandmother Rama Aai character illustration" class="w-full h-full object-cover" data-alt="Friendly cartoon grandmother with white hair and spectacles" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZbG_oeIecUkO7XHB_M7Afe9GxEPDEkTgvb798KhZjKR54hui6uHQqOnfRrB8IWJlVmtm_-Be76F43yoy1KsPl0rjFJRW7Hp-2WtwQe21EUG0RYfdaezvafbVI7Zw7kSeLkUMKCt8zsywxNcXewBFGnczH2rgtMYTWS0EDnaqtchqTHIlI-MCN1kvur0-NoYXW89moJxZWkuYXQMRFwzxzjOb7XTSUW5CmX1POoBJvXiFbqEJjxXBTnyxzX4E6PJJuWy8ufYkQaGs"/>
+</div>
+</div>
+<div class="absolute -bottom-2 -right-2 bg-primary text-white p-2 rounded-full shadow-lg">
+<span class="material-symbols-outlined text-sm">auto_awesome</span>
+</div>
+</div>
+<div class="text-center space-y-2">
+<h1 class="text-2xl font-bold text-slate-900">Hello, little one!</h1>
+<p class="text-slate-600 font-medium">What shall we learn today?</p>
+</div>
+</div>
+<div class="w-full grid grid-cols-1 gap-6 mt-10">
+<div class="neumorphic-card p-6 rounded-xl flex items-center gap-5 cursor-pointer active:scale-95 transition-transform group">
+<div class="bg-primary/20 p-4 rounded-xl text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl">menu_book</span>
+</div>
+<div class="flex-1">
+<h3 class="text-lg font-bold text-slate-800">Learn</h3>
+<p class="text-sm text-slate-500">Read a magical book</p>
+</div>
+<span class="material-symbols-outlined text-slate-400">chevron_right</span>
+</div>
+<div class="neumorphic-card p-6 rounded-xl flex items-center gap-5 cursor-pointer active:scale-95 transition-transform group">
+<div class="bg-primary/20 p-4 rounded-xl text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl">mic</span>
+</div>
+<div class="flex-1">
+<h3 class="text-lg font-bold text-slate-800">Speak</h3>
+<p class="text-sm text-slate-500">Talk with Rama Aai</p>
+</div>
+<span class="material-symbols-outlined text-slate-400">chevron_right</span>
+</div>
+<div class="neumorphic-card p-6 rounded-xl flex items-center gap-5 cursor-pointer active:scale-95 transition-transform group">
+<div class="bg-primary/20 p-4 rounded-xl text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl">magic_button</span>
+</div>
+<div class="flex-1">
+<h3 class="text-lg font-bold text-slate-800">Stories</h3>
+<p class="text-sm text-slate-500">Listen to magic tales</p>
+</div>
+<span class="material-symbols-outlined text-slate-400">chevron_right</span>
+</div>
+</div>
+<div class="mt-12 w-full">
+<h4 class="text-slate-800 font-bold mb-4">Your Magic Journey</h4>
+<div class="neumorphic-inset p-4 rounded-xl flex items-center justify-between">
+<div class="flex gap-2">
+<div class="h-2 w-12 rounded-full bg-primary"></div>
+<div class="h-2 w-12 rounded-full bg-primary/30"></div>
+<div class="h-2 w-12 rounded-full bg-primary/30"></div>
+<div class="h-2 w-12 rounded-full bg-primary/30"></div>
+</div>
+<span class="text-xs font-bold text-primary">Level 2</span>
+</div>
+</div>
+</main>
+<nav class="fixed bottom-6 left-1/2 -translate-x-1/2 w-[90%] max-w-[420px] bg-white/80 backdrop-blur-xl rounded-full py-3 px-6 shadow-2xl flex justify-between items-center border border-white/50">
+<button class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-2xl">home</span>
+<span class="text-[10px] font-bold">Home</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined text-2xl">book_4</span>
+<span class="text-[10px] font-bold">Learn</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<div class="bg-primary p-3 rounded-full -mt-10 shadow-lg text-white">
+<span class="material-symbols-outlined text-2xl">mic</span>
+</div>
+<span class="text-[10px] font-bold">Speak</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined text-2xl">auto_stories</span>
+<span class="text-[10px] font-bold">Stories</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined text-2xl">person</span>
+<span class="text-[10px] font-bold">Profile</span>
+</button>
+</nav>
+</div>
+</body></html>

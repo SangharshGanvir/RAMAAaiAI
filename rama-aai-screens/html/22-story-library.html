@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ee5b2b",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221510",
+                    },
+                    fontFamily: {
+                        "display": ["Be Vietnam Pro", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .pastel-gradient {
+            background: linear-gradient(135deg, #fff5f2 0%, #fffbf0 50%, #f0f9ff 100%);
+        }
+        .floating-shape {
+            position: absolute;
+            z-index: 0;
+            filter: blur(40px);
+            opacity: 0.4;
+        }
+    </style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark min-h-screen relative overflow-x-hidden">
+<!-- Floating Background Elements -->
+<div class="floating-shape bg-primary/20 w-64 h-64 rounded-full -top-20 -left-20"></div>
+<div class="floating-shape bg-blue-300/20 w-80 h-80 rounded-full top-1/2 -right-20"></div>
+<div class="floating-shape bg-yellow-200/20 w-48 h-48 rounded-full bottom-20 left-10"></div>
+<div class="relative z-10 flex flex-col min-h-screen max-w-[480px] mx-auto bg-white/70 backdrop-blur-md shadow-2xl">
+<!-- Top Header -->
+<header class="flex items-center justify-between px-6 py-4 border-b border-primary/10">
+<div class="flex items-center gap-2">
+<div class="bg-primary p-1.5 rounded-lg text-white">
+<span class="material-symbols-outlined text-2xl">colors_spark</span>
+</div>
+<h1 class="text-slate-900 dark:text-slate-100 text-xl font-black tracking-tight">RAMA AAI</h1>
+</div>
+<div class="flex items-center gap-2 bg-primary/10 px-3 py-1.5 rounded-full">
+<span class="material-symbols-outlined text-primary text-xl fill-1">star</span>
+<span class="text-primary font-bold">125</span>
+</div>
+</header>
+<main class="flex-1 overflow-y-auto px-6 py-6 pb-24">
+<div class="mb-8">
+<h2 class="text-3xl font-black text-slate-900 dark:text-slate-100 mb-6">Story Library</h2>
+<!-- Rama Aai Greeting -->
+<div class="flex items-end gap-4 mb-10">
+<div class="relative w-24 h-24 shrink-0">
+<div class="absolute inset-0 bg-primary/20 rounded-full scale-110"></div>
+<img alt="Rama Aai Avatar" class="relative z-10 w-full h-full object-cover" data-alt="A friendly grandmother character illustration" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvlP9z33qk95Hm6v19iwLVKax5CsR3th1P-dyi79ZeyLMvK52Vm-JaD00XDWZvUJ577KEFRFY2Z1hcmt6Tsx5IIMjY7BUgS84Hns0_uBDtKqa9kaGpJVCUKmXCJm7FOqsaAW3HnFiBNpmsAMYokSE-S0iMJjJC84a8Wslqxnn5cg-DRKAoQT46anqIa75ChziJwU1yN4qTHl5cLIlClmMHjVR6GPM9FRobOgb3poa2y33U8QC50FnUWC-x_fjMozCQeL_VnBK3I3Y"/>
+</div>
+<div class="relative bg-white border-2 border-primary/20 p-4 rounded-2xl rounded-bl-none shadow-sm">
+<p class="text-slate-700 font-medium text-lg leading-tight">Choose a magical story, little one!</p>
+<div class="absolute -left-2 bottom-0 w-4 h-4 bg-white border-l-2 border-b-2 border-primary/20 transform -rotate-45 -translate-x-1/2"></div>
+</div>
+</div>
+<!-- Story Cards Grid -->
+<div class="grid grid-cols-2 gap-4">
+<!-- Card 1 -->
+<div class="group relative flex flex-col bg-white rounded-xl overflow-hidden shadow-lg border-2 border-transparent hover:border-primary transition-all p-3">
+<div class="aspect-square rounded-lg bg-orange-50 mb-3 flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A cute fluffy white rabbit in a carrot patch" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBu_OAqSu22ZlOtLOI7xv0a4ELSLkeIDyRyk0qqNwefHZeooLcf6sf61AN9x42vvl1z8V_lE0nRse4q3SOot07FGUf2430l_AggHH_Lufbl1b0dZd7wS-mKy_HV1jVpMiwlEb5i12K5dkQMZ0sBYc_0cBEHj38T5ziPHlpkRLNIhEhf6G_RARVZeTiETcPNYZkEcqqRK4QrUTusWh_QFlDZ558wIRKvULKYFb5BBRxHLzb7WsL_QaH6OipgK6wMqLgufaxDTK1Kkm8"/>
+</div>
+<h3 class="font-bold text-slate-900 mb-4 px-1">The Little Rabbit</h3>
+<button class="w-full bg-primary hover:bg-primary/90 text-white rounded-lg py-3 flex items-center justify-center gap-2 shadow-md active:scale-95 transition-all">
+<span class="material-symbols-outlined fill-1">play_circle</span>
+<span class="font-bold">Play</span>
+</button>
+</div>
+<!-- Card 2 -->
+<div class="group relative flex flex-col bg-white rounded-xl overflow-hidden shadow-lg border-2 border-transparent hover:border-primary transition-all p-3">
+<div class="aspect-square rounded-lg bg-blue-50 mb-3 flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A colorful friendly elephant blowing bubbles" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDv7SqFLAsQQPfJshUaKTRG9lL52ja2piz5VthPY2mTZe0CNSRqZdWHlo6xVy7fT3E9V09AH07L1CwYe15f5caqA1EJh9YXiNk4qyLv7FsXdptlPyTOmFNWDcsW04x4zCgYFDO7fDnCj0BGLXjEgFXiAULtrbEBPgsIyw1dycuW3MMr0sy5ZU81ygDPuv1m0bYSDrsJHCon_B-vEZzTQomKtCDg7vKq4sU-MWWHZiGlCHa7m-ghkbem-qxAsLN17Dtmb4Q4x7zIcZU"/>
+</div>
+<h3 class="font-bold text-slate-900 mb-4 px-1">The Friendly Elephant</h3>
+<button class="w-full bg-primary hover:bg-primary/90 text-white rounded-lg py-3 flex items-center justify-center gap-2 shadow-md active:scale-95 transition-all">
+<span class="material-symbols-outlined fill-1">play_circle</span>
+<span class="font-bold">Play</span>
+</button>
+</div>
+<!-- Card 3 -->
+<div class="group relative flex flex-col bg-white rounded-xl overflow-hidden shadow-lg border-2 border-transparent hover:border-primary transition-all p-3">
+<div class="aspect-square rounded-lg bg-green-50 mb-3 flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A glowing magical tree with purple leaves" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNeWw2YIkJ0ZvmWbrHI0SvJXTqk4-jiWwXw29DDPRCmVo175BLxZq8gJJ5cdEM_ru2qoEKUd1HjE06tNt4DtZtjumZrZrDaq0eFYaI6pIV86Op3a2byv_nH3-enlF3Idun4MKnQJyNTFrEfwJPjwTKSD4B3bd9u_G728X1MRZCrOZYG5-4Q9CZmSc4iNZTVV0wnjXFKg5nMqPyeEx2mngRq-VUGlCeZNqETHQfGrIMFZ8wOBWOnzNj80mxzWixZLfxKfqUoDxvQBs"/>
+</div>
+<h3 class="font-bold text-slate-900 mb-4 px-1">The Magic Tree</h3>
+<button class="w-full bg-primary hover:bg-primary/90 text-white rounded-lg py-3 flex items-center justify-center gap-2 shadow-md active:scale-95 transition-all">
+<span class="material-symbols-outlined fill-1">play_circle</span>
+<span class="font-bold">Play</span>
+</button>
+</div>
+<!-- Card 4 -->
+<div class="group relative flex flex-col bg-white rounded-xl overflow-hidden shadow-lg border-2 border-transparent hover:border-primary transition-all p-3">
+<div class="aspect-square rounded-lg bg-yellow-50 mb-3 flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A small brave colorful bird flying high" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNxfiOAfpEz2g_wv5kfTt0vZyDVJ6vmjGTqhnNpfT9smQjxN-OerdMAAlYYvViUXFE2EXjm6LVVF0q1p5UGSKkZCPUiTvmzWOLckb6rLG6YCMpuNR5B_aO_T2lL8nhF-jS86uGnSwkszqo8LdtBjJdtaWBGUEn2C4DYa5Vp9rB8AxYYY-Hf4YQNngPU96-6GH6yIZgInn8Ti7xJyFpR1_xkIxGN_AJIYgMhCNE7Q0Cpn2Nlrif20kLapehy4qMvG3OEN54dYD24A0"/>
+</div>
+<h3 class="font-bold text-slate-900 mb-4 px-1">The Brave Bird</h3>
+<button class="w-full bg-primary hover:bg-primary/90 text-white rounded-lg py-3 flex items-center justify-center gap-2 shadow-md active:scale-95 transition-all">
+<span class="material-symbols-outlined fill-1">play_circle</span>
+<span class="font-bold">Play</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[480px] bg-white/90 backdrop-blur-lg border-t border-slate-200 px-6 py-3 flex justify-between items-center z-50 rounded-t-2xl shadow-[0_-4px_10px_rgba(0,0,0,0.05)]">
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">Home</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined">school</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">Learn</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined">record_voice_over</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">Speak</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined fill-1">auto_stories</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">Stories</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">Profile</span>
+</button>
+</nav>
+</div>
+</body></html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ee5b2b",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221510",
+                    },
+                    fontFamily: {
+                        "display": ["Be Vietnam Pro"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>RAMA AAI Learning Activity</title>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 transition-colors duration-300">
+<div class="relative flex h-screen w-full flex-col overflow-hidden">
+<header class="flex items-center justify-between px-6 py-4 bg-white dark:bg-slate-900 shadow-sm border-b border-slate-200 dark:border-slate-800">
+<div class="flex items-center gap-3">
+<button class="p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-400">arrow_back</span>
+</button>
+<div class="flex flex-col">
+<h1 class="text-lg font-bold leading-tight">Colors &amp; Shapes</h1>
+<div class="flex items-center gap-2">
+<div class="flex gap-0.5">
+<span class="material-symbols-outlined text-yellow-400 text-sm fill-1" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined text-yellow-400 text-sm fill-1" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined text-yellow-400 text-sm fill-1" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined text-yellow-400 text-sm fill-1" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined text-slate-300 dark:text-slate-700 text-sm">star</span>
+</div>
+<span class="text-xs text-slate-500 font-medium">4 / 10 Stars</span>
+</div>
+</div>
+</div>
+<div class="flex-1 max-w-xs mx-8 hidden sm:block">
+<div class="h-2.5 w-full bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
+<div class="h-full bg-primary" style="width: 40%"></div>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="bg-primary/10 dark:bg-primary/20 p-2 rounded-lg text-primary">
+<span class="material-symbols-outlined">help</span>
+</button>
+</div>
+</header>
+<main class="flex-1 flex flex-col md:flex-row p-4 md:p-8 gap-6 overflow-y-auto">
+<div class="flex flex-col items-center md:items-start md:w-1/3 gap-4 pt-4">
+<div class="relative group">
+<div class="absolute -inset-1 bg-gradient-to-r from-primary to-orange-400 rounded-full blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+<img alt="Friendly Rama Aai character smiling warmly" class="relative h-48 w-48 md:h-64 md:w-64 rounded-full border-4 border-white dark:border-slate-800 shadow-xl object-cover" data-alt="Friendly Indian grandmother character avatar smiling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVl7--7TaOdBnIdpiF8gTERf4DJ5fvy1OPqdcn_vZA-tua1MtEN_oV6O12YCfhoKtrHZ-b9reyAzKGkMy6ytU5UfX85AIOWxan5EgIpIvECV_6ZYW-UrWPtLBCp8QwK3nv8zW2aXOpA8GKk_iQwQH6OkjbeExZzFm2qwbFXgBzhyMAS8gP_2DCINAqmNPeHicJpH-lRQaQmo1u2kVMmw3meJzzjweqR1VSUzHQjSeITBuz-A4A-WYjZBFpQCWelpUvEy4YRyEDqU8"/>
+</div>
+<div class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-lg border-2 border-primary/20 relative max-w-sm">
+<div class="absolute -top-3 left-1/2 md:left-10 transform -translate-x-1/2 md:translate-x-0 w-6 h-6 bg-white dark:bg-slate-800 border-t-2 border-l-2 border-primary/20 rotate-45"></div>
+<p class="text-lg md:text-xl font-medium text-slate-800 dark:text-slate-100">
+                        "Can you find the <span class="text-primary font-bold underline decoration-primary/30">Red Apple</span>? Tap and say its name!"
+                    </p>
+<button class="mt-4 flex items-center gap-2 text-primary font-bold hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined">volume_up</span>
+<span>Listen to Aai</span>
+</button>
+</div>
+</div>
+<div class="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-6 items-center content-center max-w-4xl mx-auto w-full">
+<div class="group relative bg-white dark:bg-slate-800 rounded-xl p-4 shadow-xl border-4 border-transparent hover:border-primary cursor-pointer transition-all">
+<div class="aspect-square rounded-lg bg-red-50 dark:bg-red-950/20 flex items-center justify-center overflow-hidden mb-4">
+<img alt="A shiny bright red apple" class="w-4/5 h-4/5 object-contain transform group-hover:scale-110 transition-transform duration-500" data-alt="A large bright red fresh apple" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGtLdqbb9uTXbYi6_4lQgWpYJIBljUFLuzUJ8M_6aYeLFwbBkDKV9nAcl8mxYjBOjiMfo9mf55Js08Ahh4J3m7nJ2oVZWPIl-ZexnBcQJPM6W62Lyr8GkBSOMu0AIs_lieWPrVau6swqaE2yshUIR4BnKkTQ95OtWmVci_0bSSTMUc8bLCLN0C5PlpWT78U-AJSufxx197T7FdxiZaUkaVnYYEY0CHUVFyj3Cs8lt-IezWY_heskhk2Jm_mVS9irpeTXQHMaVFKQw"/>
+</div>
+<h3 class="text-2xl font-bold text-center mb-2">Red Apple</h3>
+<div class="flex justify-center">
+<div class="bg-primary text-white p-3 rounded-full shadow-lg group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">mic</span>
+</div>
+</div>
+</div>
+<div class="group relative bg-white dark:bg-slate-800 rounded-xl p-4 shadow-xl border-4 border-transparent hover:border-blue-500 cursor-pointer transition-all">
+<div class="aspect-square rounded-lg bg-blue-50 dark:bg-blue-950/20 flex items-center justify-center overflow-hidden mb-4">
+<div class="w-3/5 h-3/5 bg-blue-500 rounded-lg shadow-inner transform group-hover:rotate-12 transition-transform duration-500"></div>
+</div>
+<h3 class="text-2xl font-bold text-center mb-2">Blue Square</h3>
+<div class="flex justify-center">
+<div class="bg-slate-200 dark:bg-slate-700 text-slate-500 p-3 rounded-full shadow-lg group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">mic</span>
+</div>
+</div>
+</div>
+<div class="group relative bg-white dark:bg-slate-800 rounded-xl p-4 shadow-xl border-4 border-transparent hover:border-green-500 cursor-pointer transition-all">
+<div class="aspect-square rounded-lg bg-green-50 dark:bg-green-950/20 flex items-center justify-center overflow-hidden mb-4">
+<img alt="Two yellow bananas" class="w-4/5 h-4/5 object-contain transform group-hover:scale-110 transition-transform duration-500" data-alt="Two bright yellow ripe bananas" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYx0LtffknFKS10rAFQ6bWDtWrJZjA8ee5JPpoqWa3W4UAwq8Smdhc9RcTN7FwqQCEWkpHa5YtkJyIZ6woq7APLHBpujrNAeheCQ4TESCS-kgmIUy1y6lfNa486BV9s30YRpH-7XdVQDm9PMu8pFy6VsFWB9BM10PrzAjpj6wSBxrMxTaLf7NmQQBkBfcigOjdX9HJhe1PqdmAfTi2WyfaAft7wmV2L2Gk-fTLS-_0t5ZLTNxZb3N119h0wAGMwKmN0nlmzboXrNs"/>
+</div>
+<h3 class="text-2xl font-bold text-center mb-2">Yellow Banana</h3>
+<div class="flex justify-center">
+<div class="bg-slate-200 dark:bg-slate-700 text-slate-500 p-3 rounded-full shadow-lg group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">mic</span>
+</div>
+</div>
+</div>
+<div class="group relative bg-white dark:bg-slate-800 rounded-xl p-4 shadow-xl border-4 border-transparent hover:border-purple-500 cursor-pointer transition-all">
+<div class="aspect-square rounded-lg bg-purple-50 dark:bg-purple-950/20 flex items-center justify-center overflow-hidden mb-4">
+<div class="w-3/5 h-3/5 bg-purple-500 rounded-full shadow-inner transform group-hover:scale-110 transition-transform duration-500"></div>
+</div>
+<h3 class="text-2xl font-bold text-center mb-2">Purple Circle</h3>
+<div class="flex justify-center">
+<div class="bg-slate-200 dark:bg-slate-700 text-slate-500 p-3 rounded-full shadow-lg group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">mic</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 px-6 py-4">
+<div class="max-w-screen-xl mx-auto flex items-center justify-around">
+<button class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">house</span>
+<span class="text-xs font-bold uppercase tracking-wider">Home</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined fill-1" style="font-variation-settings: 'FILL' 1">menu_book</span>
+<span class="text-xs font-bold uppercase tracking-wider">Learn</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">sports_esports</span>
+<span class="text-xs font-bold uppercase tracking-wider">Play</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">person</span>
+<span class="text-xs font-bold uppercase tracking-wider">Profile</span>
+</button>
+</div>
+</footer>
+<div class="absolute bottom-24 right-6 flex flex-col gap-3">
+<button class="bg-white dark:bg-slate-800 p-4 rounded-full shadow-2xl border-2 border-primary animate-pulse">
+<span class="material-symbols-outlined text-primary text-3xl">mic</span>
+</button>
+<button class="bg-slate-900 dark:bg-slate-100 text-white dark:text-slate-900 p-4 rounded-full shadow-xl">
+<span class="material-symbols-outlined text-3xl">auto_awesome</span>
+</button>
+</div>
+</div>
+</body></html>

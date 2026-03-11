@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ee5b2b",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221510",
+                    },
+                    fontFamily: {
+                        "display": ["Be Vietnam Pro", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>Rama Aai Settings</title>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="max-w-[540px] mx-auto min-h-screen flex flex-col bg-white dark:bg-slate-900 shadow-xl overflow-hidden">
+<!-- Header -->
+<header class="flex items-center justify-between px-6 py-5 border-b border-primary/10">
+<div class="flex items-center gap-3">
+<div class="bg-primary/10 p-2 rounded-lg">
+<span class="material-symbols-outlined text-primary">settings</span>
+</div>
+<h1 class="text-xl font-bold tracking-tight">Settings</h1>
+</div>
+<button class="size-10 flex items-center justify-center rounded-full bg-background-light dark:bg-slate-800 hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-300">close</span>
+</button>
+</header>
+<!-- Content Area -->
+<main class="flex-1 overflow-y-auto p-6 space-y-6">
+<!-- Rama Aai Profile Brief -->
+<div class="flex items-center gap-4 bg-gradient-to-r from-primary/5 to-transparent p-4 rounded-xl border border-primary/5">
+<div class="size-14 rounded-full bg-primary/20 flex items-center justify-center overflow-hidden border-2 border-primary/20">
+<img class="w-full h-full object-cover" data-alt="Friendly character portrait of Rama Aai" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPj0iS5ipPMGSD7g4hZwvgUU3YF4sM942--SdQ8Y9-6SL9D4fZkTZxK9vQR-qddBxGTMWCboCnpnHJ4j8DK89Vmutk59xByMUb04XirIXOD3aQkXBnwvr9k93dCu4k8J9CjBEzCkxCCiea3a80r6tQbHtsJkXcm-softSCbOWiF_gX8eMJW7XTKsshrdCupY2roUxHf8FZdRtsBu5nD8OsLilsfrs5FHQeWoEbOoYeOiH7EzWak_RLoRBHFXKvEVpNeMJpsa51kWY"/>
+</div>
+<div>
+<h2 class="font-bold text-lg">Rama Aai</h2>
+<p class="text-sm opacity-70">Your Learning Companion</p>
+</div>
+</div>
+<!-- Sound Settings Card -->
+<section class="bg-background-light dark:bg-slate-800 p-5 rounded-xl space-y-5 border border-primary/5 shadow-sm">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-primary text-xl">volume_up</span>
+<h3 class="font-bold text-base">Sound Settings</h3>
+</div>
+<div class="space-y-3">
+<div class="flex justify-between items-center">
+<label class="text-sm font-medium">Voice Volume</label>
+<span class="text-xs font-bold text-primary">80%</span>
+</div>
+<div class="relative w-full h-2 bg-primary/10 rounded-full overflow-hidden">
+<div class="absolute top-0 left-0 h-full w-[80%] bg-primary rounded-full"></div>
+<div class="absolute top-1/2 left-[80%] -translate-y-1/2 -translate-x-1/2 size-4 bg-white border-2 border-primary rounded-full shadow-md"></div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary/60">music_note</span>
+<span class="text-sm font-medium">Background Music</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-slate-300 peer-focus:outline-none rounded-full peer dark:bg-slate-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+</section>
+<!-- Voice Speed Control -->
+<section class="bg-background-light dark:bg-slate-800 p-5 rounded-xl space-y-4 border border-primary/5 shadow-sm">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-primary text-xl">speed</span>
+<h3 class="font-bold text-base">Rama Aai's Voice Speed</h3>
+</div>
+<div class="grid grid-cols-3 gap-2 bg-primary/5 p-1 rounded-lg">
+<button class="py-2 text-sm font-medium rounded-md hover:bg-white dark:hover:bg-slate-700 transition-all">Slow</button>
+<button class="py-2 text-sm font-bold rounded-md bg-white dark:bg-slate-700 shadow-sm text-primary">Normal</button>
+<button class="py-2 text-sm font-medium rounded-md hover:bg-white dark:hover:bg-slate-700 transition-all">Fast</button>
+</div>
+</section>
+<!-- Language & Region -->
+<section class="bg-background-light dark:bg-slate-800 p-5 rounded-xl space-y-4 border border-primary/5 shadow-sm">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-primary text-xl">language</span>
+<h3 class="font-bold text-base">Language</h3>
+</div>
+<div class="relative">
+<select class="w-full appearance-none bg-white dark:bg-slate-700 border border-primary/10 px-4 py-3 rounded-lg text-sm font-medium focus:ring-2 focus:ring-primary focus:outline-none">
+<option>English (US)</option>
+<option>English (UK)</option>
+<option>Hindi</option>
+<option>Marathi</option>
+</select>
+<div class="absolute inset-y-0 right-3 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-slate-400">expand_more</span>
+</div>
+</div>
+</section>
+<!-- Accessibility Card -->
+<section class="bg-background-light dark:bg-slate-800 p-5 rounded-xl space-y-4 border border-primary/5 shadow-sm">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-primary text-xl">accessibility</span>
+<h3 class="font-bold text-base">Accessibility</h3>
+</div>
+<div class="space-y-4">
+<div class="flex items-center justify-between">
+<span class="text-sm font-medium">Large Text</span>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-slate-300 peer-focus:outline-none rounded-full peer dark:bg-slate-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-sm font-medium">Extra Voice Guidance</span>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-slate-300 peer-focus:outline-none rounded-full peer dark:bg-slate-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+</section>
+<!-- Parental Settings Card -->
+<section class="bg-primary/5 p-5 rounded-xl space-y-4 border border-primary/10 shadow-sm relative overflow-hidden">
+<div class="absolute -right-4 -top-4 size-24 bg-primary/5 rounded-full blur-2xl"></div>
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-primary text-xl">family_restroom</span>
+<h3 class="font-bold text-base">Parental Settings</h3>
+</div>
+<div class="space-y-4 relative z-10">
+<div class="p-3 bg-white dark:bg-slate-700 rounded-lg flex items-center justify-between border border-primary/5">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary/60 text-lg">timer</span>
+<span class="text-sm font-medium">Daily Learning Limit</span>
+</div>
+<span class="text-sm font-bold text-primary">30 mins</span>
+</div>
+<a class="flex items-center justify-between group p-3 hover:bg-primary/10 rounded-lg transition-colors border border-transparent hover:border-primary/10" href="#">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary/60 text-lg">query_stats</span>
+<span class="text-sm font-medium">Progress Overview</span>
+</div>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">chevron_right</span>
+</a>
+</div>
+</section>
+<!-- Footer Meta -->
+<div class="text-center py-6 opacity-40 text-xs">
+<p>Rama Aai Version 2.4.0</p>
+<p class="mt-1">Crafted for Curious Minds</p>
+</div>
+</main>
+</div>
+</body></html>

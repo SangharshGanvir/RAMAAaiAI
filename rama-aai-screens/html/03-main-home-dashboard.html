@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Rama AAI - Magical Learning</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ee5b2b",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221510",
+                    },
+                    fontFamily: {
+                        "display": ["Be Vietnam Pro"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .pastel-gradient-bg {
+            background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+        }
+        .floating-stars {
+            background-image: radial-gradient(circle at 20% 30%, rgba(238, 91, 43, 0.05) 0%, transparent 8%),
+                              radial-gradient(circle at 80% 10%, rgba(238, 91, 43, 0.08) 0%, transparent 12%),
+                              radial-gradient(circle at 50% 50%, rgba(238, 91, 43, 0.03) 0%, transparent 15%),
+                              radial-gradient(circle at 10% 80%, rgba(238, 91, 43, 0.06) 0%, transparent 10%),
+                              radial-gradient(circle at 90% 90%, rgba(238, 91, 43, 0.07) 0%, transparent 14%);
+        }
+    </style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark min-h-screen">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden pastel-gradient-bg floating-stars">
+<!-- Top Navigation Bar -->
+<header class="flex items-center justify-between px-6 py-4 bg-white/60 backdrop-blur-md sticky top-0 z-10 border-b border-primary/10">
+<div class="flex items-center gap-3">
+<div class="bg-primary p-1.5 rounded-lg text-white">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1">auto_awesome</span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-xl font-bold tracking-tight">Rama AAI</h2>
+</div>
+<div class="flex items-center bg-white rounded-full px-4 py-2 shadow-sm border border-primary/10">
+<span class="material-symbols-outlined text-amber-400 mr-2" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="text-primary font-bold text-sm">12 Stars</span>
+</div>
+</header>
+<!-- Main Content Section -->
+<main class="flex-1 flex flex-col items-center px-6 pt-8 pb-32 max-w-4xl mx-auto w-full">
+<!-- Hero Rama Aai Illustration Area -->
+<div class="relative w-full flex flex-col items-center mb-8">
+<div class="w-48 h-48 rounded-full bg-white shadow-xl flex items-center justify-center overflow-hidden border-4 border-white mb-6">
+<img alt="Friendly grandmother illustration waving" class="w-full h-full object-cover" data-alt="A friendly grandmother illustration smiling and waving warmly" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuKX4AOutP3gw4ZAc-y_AXHfcF-N7Cs2zjcbIGieLUk-FijRCxokIg00y4ykHClUsi_ky1iHuQL91a1ACNKgfR1dgACJstkCGD03xOIvk76Z06reGunNvZEtuMhHxJsLgy2Mp2Fk4MOuzjTPX0i6XqpjLOdV5PRdpYlA9g_FqOEUzf4-UmX_zQRarr9BebGB4AWBiG-m3zA5XHRdsNhKTKeec2Dgchspa6KDUZlPXKr8Lh1ZpLyx2jhhcdgrFhxmk-pHyOlEjMtr4"/>
+</div>
+<h1 class="text-slate-900 dark:text-slate-100 text-2xl font-bold text-center leading-tight">
+                    Ready to play? <br/>
+<span class="text-primary">Pick a magical activity.</span>
+</h1>
+</div>
+<!-- 2x3 Activity Grid -->
+<div class="grid grid-cols-2 gap-4 w-full">
+<!-- Learn -->
+<button class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow flex flex-col items-center justify-center gap-4 border-b-4 border-blue-100 active:translate-y-1">
+<div class="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center text-blue-500">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'wght' 600">menu_book</span>
+</div>
+<span class="font-bold text-slate-700 text-lg">Learn</span>
+</button>
+<!-- Letters -->
+<button class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow flex flex-col items-center justify-center gap-4 border-b-4 border-red-100 active:translate-y-1">
+<div class="w-16 h-16 bg-red-50 rounded-full flex items-center justify-center text-red-500">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'wght' 600">category</span>
+</div>
+<span class="font-bold text-slate-700 text-lg">Letters</span>
+</button>
+<!-- Speak -->
+<button class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow flex flex-col items-center justify-center gap-4 border-b-4 border-green-100 active:translate-y-1">
+<div class="w-16 h-16 bg-green-50 rounded-full flex items-center justify-center text-green-500">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'wght' 600">mic</span>
+</div>
+<span class="font-bold text-slate-700 text-lg">Speak</span>
+</button>
+<!-- Writing -->
+<button class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow flex flex-col items-center justify-center gap-4 border-b-4 border-purple-100 active:translate-y-1">
+<div class="w-16 h-16 bg-purple-50 rounded-full flex items-center justify-center text-purple-500">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'wght' 600">edit</span>
+</div>
+<span class="font-bold text-slate-700 text-lg">Writing</span>
+</button>
+<!-- Word Games -->
+<button class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow flex flex-col items-center justify-center gap-4 border-b-4 border-orange-100 active:translate-y-1">
+<div class="w-16 h-16 bg-orange-50 rounded-full flex items-center justify-center text-orange-500">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'wght' 600">extension</span>
+</div>
+<span class="font-bold text-slate-700 text-lg">Word Games</span>
+</button>
+<!-- Story Time -->
+<button class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow flex flex-col items-center justify-center gap-4 border-b-4 border-yellow-100 active:translate-y-1">
+<div class="w-16 h-16 bg-yellow-50 rounded-full flex items-center justify-center text-yellow-600">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'wght' 600">auto_stories</span>
+</div>
+<span class="font-bold text-slate-700 text-lg">Story Time</span>
+</button>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur-md border-t border-slate-100 px-6 py-3 flex justify-between items-center z-20">
+<button class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1">home</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">Home</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined text-2xl">school</span>
+<span class="text-[10px] font-medium uppercase tracking-wider">Learn</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined text-2xl">voice_over_off</span>
+<span class="text-[10px] font-medium uppercase tracking-wider">Speak</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined text-2xl">auto_stories</span>
+<span class="text-[10px] font-medium uppercase tracking-wider">Stories</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<div class="w-6 h-6 rounded-full bg-slate-200 overflow-hidden">
+<img alt="User profile" class="w-full h-full object-cover" data-alt="A small child profile avatar circle" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaCGaaNfhzfYkPFCkI2dKT1NmkjWh5lF-ECJeKz9P7nI3mYY9ELJzjMVjivHvw3temc6TUhXIqytIpaasz7Oz87c_L1zs1d0pZ5-aAiL-VpWpc4TK-QnUED9bd3F-YS8eqiZWuz0FO1CWaFzZjuchum24QIbdz7NPwDSK-EVUuMtgqOyV1Lk_MQLKYvysEEE0_Fr2f5INO7mQLWeIP6geQ-qyeFBF3NMysRuxQJ9-hBMCoHAkKIKvpxOJa8GY0jAapSfgaKt-2xKI"/>
+</div>
+<span class="text-[10px] font-medium uppercase tracking-wider">Profile</span>
+</button>
+</nav>
+</div>
+</body></html>

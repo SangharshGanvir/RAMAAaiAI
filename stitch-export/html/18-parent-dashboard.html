@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>RAMA AAI - Parent Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ee5b2b",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221510",
+                    },
+                    fontFamily: {
+                        "display": ["Be Vietnam Pro"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Navigation -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-primary/10 px-6 md:px-20 py-4 bg-white dark:bg-slate-900/50 backdrop-blur-md sticky top-0 z-50">
+<div class="flex items-center gap-3 text-primary">
+<div class="size-8 flex items-center justify-center rounded-lg bg-primary text-white">
+<span class="material-symbols-outlined text-2xl">school</span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-xl font-black leading-tight tracking-tight">RAMA AAI</h2>
+</div>
+<div class="flex flex-1 justify-end gap-4 items-center">
+<div class="hidden md:flex gap-1 mr-4">
+<button class="px-4 py-2 rounded-lg bg-primary/10 text-primary font-bold text-sm">Dashboard</button>
+<button class="px-4 py-2 rounded-lg text-slate-600 dark:text-slate-400 font-medium text-sm hover:bg-primary/5">Library</button>
+<button class="px-4 py-2 rounded-lg text-slate-600 dark:text-slate-400 font-medium text-sm hover:bg-primary/5">Reports</button>
+</div>
+<div class="flex gap-2">
+<button class="flex size-10 cursor-pointer items-center justify-center rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="flex size-10 cursor-pointer items-center justify-center rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
+<span class="material-symbols-outlined">settings</span>
+</button>
+</div>
+<div class="bg-primary/20 rounded-full size-10 border-2 border-primary overflow-hidden" data-alt="User profile avatar icon with soft orange background" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBO7G6XLMFlt0wRE7s1v9mXOemJlkziXIKdFmB7sni1PsANTgLay7DKJkHWxDFZRkMdf-QoQdH4GqfVoXBQ39wfxuhV-HfFiBbfccKKaSYg6Pl0XtimEnM3m2poeWPdXafhWpuy6E425ON7cuedb6YmtaoX3TqnCFQ61lQbwkmnT_ktv8Ef2y9X1yfIK5zPvcVn47GYZXPsjjoanUeYecUgZPG1Oiih_c7dL2YSEqpC-_Gv0DqLTcalQvlfd3Yi4rNuTfHjBrFS0ms"); background-size: cover;'>
+</div>
+</div>
+</header>
+<main class="flex flex-col flex-1 px-6 md:px-20 py-8 max-w-[1440px] mx-auto w-full gap-8">
+<!-- Welcome Header -->
+<div class="flex flex-col gap-2">
+<h1 class="text-slate-900 dark:text-slate-100 text-4xl font-black tracking-tight">Parent Dashboard</h1>
+<p class="text-slate-500 dark:text-slate-400 text-lg">Hello! Here is your child's learning progress.</p>
+</div>
+<!-- Progress Cards Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Card 1 -->
+<div class="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700 flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<div class="size-12 rounded-lg bg-orange-100 dark:bg-orange-900/30 flex items-center justify-center text-orange-600">
+<span class="material-symbols-outlined text-3xl">menu_book</span>
+</div>
+<span class="text-slate-400 font-bold text-sm">69%</span>
+</div>
+<div>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Letters Learned</p>
+<h3 class="text-2xl font-bold text-slate-900 dark:text-slate-100">18/26 Letters</h3>
+</div>
+<div class="w-full bg-slate-100 dark:bg-slate-700 h-2.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 69%"></div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700 flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<div class="size-12 rounded-lg bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-blue-600">
+<span class="material-symbols-outlined text-3xl">description</span>
+</div>
+<span class="text-slate-400 font-bold text-sm">24%</span>
+</div>
+<div>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Words Learned</p>
+<h3 class="text-2xl font-bold text-slate-900 dark:text-slate-100">120/500 Words</h3>
+</div>
+<div class="w-full bg-slate-100 dark:bg-slate-700 h-2.5 rounded-full overflow-hidden">
+<div class="bg-blue-500 h-full rounded-full" style="width: 24%"></div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700 flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<div class="size-12 rounded-lg bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center text-purple-600">
+<span class="material-symbols-outlined text-3xl">auto_stories</span>
+</div>
+<span class="text-slate-400 font-bold text-sm">50%</span>
+</div>
+<div>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Stories Completed</p>
+<h3 class="text-2xl font-bold text-slate-900 dark:text-slate-100">5/10 Stories</h3>
+</div>
+<div class="w-full bg-slate-100 dark:bg-slate-700 h-2.5 rounded-full overflow-hidden">
+<div class="bg-purple-500 h-full rounded-full" style="width: 50%"></div>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700 flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<div class="size-12 rounded-lg bg-green-100 dark:bg-green-900/30 flex items-center justify-center text-green-600">
+<span class="material-symbols-outlined text-3xl">mic</span>
+</div>
+<span class="text-green-600 font-bold text-sm">+15m today</span>
+</div>
+<div>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Speaking Practice</p>
+<h3 class="text-2xl font-bold text-slate-900 dark:text-slate-100">Daily Streak: 4</h3>
+</div>
+<div class="w-full bg-slate-100 dark:bg-slate-700 h-2.5 rounded-full overflow-hidden">
+<div class="bg-green-500 h-full rounded-full" style="width: 80%"></div>
+</div>
+</div>
+</div>
+<!-- Activity Chart & Achievements -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Weekly Activity Chart Card -->
+<div class="lg:col-span-2 bg-white dark:bg-slate-800 p-8 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700">
+<div class="flex items-center justify-between mb-8">
+<h2 class="text-xl font-bold">Weekly Activity</h2>
+<select class="bg-slate-100 dark:bg-slate-700 border-none rounded-lg text-sm px-4 py-2 focus:ring-primary">
+<option>This Week</option>
+<option>Last Week</option>
+</select>
+</div>
+<div class="flex items-end justify-between h-48 gap-2 pt-4">
+<div class="flex flex-col items-center gap-2 flex-1">
+<div class="w-full bg-primary/20 dark:bg-primary/10 rounded-t-lg transition-all hover:bg-primary/40" style="height: 40%"></div>
+<span class="text-xs text-slate-400 font-medium">Mon</span>
+</div>
+<div class="flex flex-col items-center gap-2 flex-1">
+<div class="w-full bg-primary/20 dark:bg-primary/10 rounded-t-lg transition-all hover:bg-primary/40" style="height: 60%"></div>
+<span class="text-xs text-slate-400 font-medium">Tue</span>
+</div>
+<div class="flex flex-col items-center gap-2 flex-1">
+<div class="w-full bg-primary rounded-t-lg transition-all" style="height: 90%"></div>
+<span class="text-xs text-slate-400 font-medium">Wed</span>
+</div>
+<div class="flex flex-col items-center gap-2 flex-1">
+<div class="w-full bg-primary/20 dark:bg-primary/10 rounded-t-lg transition-all hover:bg-primary/40" style="height: 30%"></div>
+<span class="text-xs text-slate-400 font-medium">Thu</span>
+</div>
+<div class="flex flex-col items-center gap-2 flex-1">
+<div class="w-full bg-primary/20 dark:bg-primary/10 rounded-t-lg transition-all hover:bg-primary/40" style="height: 50%"></div>
+<span class="text-xs text-slate-400 font-medium">Fri</span>
+</div>
+<div class="flex flex-col items-center gap-2 flex-1">
+<div class="w-full bg-primary/20 dark:bg-primary/10 rounded-t-lg transition-all hover:bg-primary/40" style="height: 75%"></div>
+<span class="text-xs text-slate-400 font-medium">Sat</span>
+</div>
+<div class="flex flex-col items-center gap-2 flex-1">
+<div class="w-full bg-primary/20 dark:bg-primary/10 rounded-t-lg transition-all hover:bg-primary/40" style="height: 20%"></div>
+<span class="text-xs text-slate-400 font-medium">Sun</span>
+</div>
+</div>
+</div>
+<!-- Achievements Card -->
+<div class="bg-white dark:bg-slate-800 p-8 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700">
+<h2 class="text-xl font-bold mb-6">Achievements</h2>
+<div class="grid grid-cols-3 gap-4">
+<div class="flex flex-col items-center gap-2">
+<div class="size-16 rounded-full bg-yellow-100 flex items-center justify-center border-4 border-yellow-200">
+<span class="material-symbols-outlined text-yellow-600 text-3xl">star</span>
+</div>
+<span class="text-[10px] font-bold text-center uppercase tracking-wider text-slate-500">Super Star</span>
+</div>
+<div class="flex flex-col items-center gap-2">
+<div class="size-16 rounded-full bg-blue-100 flex items-center justify-center border-4 border-blue-200">
+<span class="material-symbols-outlined text-blue-600 text-3xl">speed</span>
+</div>
+<span class="text-[10px] font-bold text-center uppercase tracking-wider text-slate-500">Fast Learner</span>
+</div>
+<div class="flex flex-col items-center gap-2">
+<div class="size-16 rounded-full bg-green-100 flex items-center justify-center border-4 border-green-200">
+<span class="material-symbols-outlined text-green-600 text-3xl">volunteer_activism</span>
+</div>
+<span class="text-[10px] font-bold text-center uppercase tracking-wider text-slate-500">Kind Heart</span>
+</div>
+<div class="flex flex-col items-center gap-2">
+<div class="size-16 rounded-full bg-slate-100 flex items-center justify-center border-4 border-slate-200 opacity-40 grayscale">
+<span class="material-symbols-outlined text-slate-400 text-3xl">emoji_events</span>
+</div>
+<span class="text-[10px] font-bold text-center uppercase tracking-wider text-slate-400">Champion</span>
+</div>
+<div class="flex flex-col items-center gap-2">
+<div class="size-16 rounded-full bg-slate-100 flex items-center justify-center border-4 border-slate-200 opacity-40 grayscale">
+<span class="material-symbols-outlined text-slate-400 text-3xl">forest</span>
+</div>
+<span class="text-[10px] font-bold text-center uppercase tracking-wider text-slate-400">Nature Lover</span>
+</div>
+<div class="flex flex-col items-center gap-2 justify-center">
+<div class="size-16 rounded-full border-2 border-dashed border-slate-300 flex items-center justify-center">
+<span class="material-symbols-outlined text-slate-300">add</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Recommendations Section -->
+<div class="flex flex-col gap-6">
+<div class="flex items-center justify-between">
+<h2 class="text-2xl font-bold tracking-tight">Suggested Next Activities</h2>
+<button class="text-primary font-bold flex items-center gap-1 hover:underline">
+                        View All <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Recommended Card 1 -->
+<div class="group cursor-pointer bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-sm border border-slate-100 dark:border-slate-700 transition-all hover:shadow-lg hover:-translate-y-1">
+<div class="h-40 bg-orange-50 dark:bg-primary/5 flex items-center justify-center overflow-hidden relative" data-alt="Playful illustration of letter B with Rama Aai character">
+<span class="material-symbols-outlined text-primary text-6xl opacity-20 absolute -right-4 -bottom-4 rotate-12">font_download</span>
+<div class="size-24 rounded-full bg-primary/20 flex items-center justify-center text-primary font-black text-5xl group-hover:scale-110 transition-transform">B</div>
+</div>
+<div class="p-5 flex flex-col gap-2">
+<span class="text-[10px] font-black uppercase text-primary tracking-widest">Phonics</span>
+<h4 class="text-lg font-bold text-slate-900 dark:text-slate-100">Letter B Practice</h4>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Help your child master the 'Buh' sound with fun games.</p>
+</div>
+</div>
+<!-- Recommended Card 2 -->
+<div class="group cursor-pointer bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-sm border border-slate-100 dark:border-slate-700 transition-all hover:shadow-lg hover:-translate-y-1">
+<div class="h-40 bg-blue-50 dark:bg-blue-900/10 flex items-center justify-center overflow-hidden relative" data-alt="Illustration of a small brave bird in a nest">
+<span class="material-symbols-outlined text-blue-600 text-6xl opacity-20 absolute -right-4 -bottom-4 -rotate-12">cruelty_free</span>
+<div class="size-24 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-blue-600 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-5xl">auto_stories</span>
+</div>
+</div>
+<div class="p-5 flex flex-col gap-2">
+<span class="text-[10px] font-black uppercase text-blue-600 tracking-widest">Storytime</span>
+<h4 class="text-lg font-bold text-slate-900 dark:text-slate-100">The Brave Little Bird</h4>
+<p class="text-slate-500 dark:text-slate-400 text-sm">A new interactive story about courage and making friends.</p>
+</div>
+</div>
+<!-- Recommended Card 3 -->
+<div class="group cursor-pointer bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-sm border border-slate-100 dark:border-slate-700 transition-all hover:shadow-lg hover:-translate-y-1">
+<div class="h-40 bg-green-50 dark:bg-green-900/10 flex items-center justify-center overflow-hidden relative" data-alt="Microphone icon with music notes and playful colors">
+<span class="material-symbols-outlined text-green-600 text-6xl opacity-20 absolute -right-4 -bottom-4 rotate-12">music_note</span>
+<div class="size-24 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center text-green-600 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-5xl">interpreter_mode</span>
+</div>
+</div>
+<div class="p-5 flex flex-col gap-2">
+<span class="text-[10px] font-black uppercase text-green-600 tracking-widest">Speaking</span>
+<h4 class="text-lg font-bold text-slate-900 dark:text-slate-100">Sing-along Rhymes</h4>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Practice pronunciation through 3 new nursery rhymes.</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="mt-12 border-t border-slate-200 dark:border-slate-800 py-10 px-6 md:px-20 bg-white dark:bg-slate-900">
+<div class="max-w-[1440px] mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">school</span>
+<span class="font-black text-slate-900 dark:text-slate-100">RAMA AAI</span>
+</div>
+<div class="flex gap-8 text-sm font-medium text-slate-500">
+<a class="hover:text-primary" href="#">Parent Guide</a>
+<a class="hover:text-primary" href="#">Privacy Policy</a>
+<a class="hover:text-primary" href="#">Help Center</a>
+</div>
+<p class="text-slate-400 text-sm">© 2024 Rama AAI Learning</p>
+</div>
+</footer>
+</div>
+</div>
+</body></html>

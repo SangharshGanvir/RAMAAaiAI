@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>RAMA AAI - Word Match</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ee5b2b",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221510",
+                    },
+                    fontFamily: {
+                        "display": ["Be Vietnam Pro"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .pastel-gradient {
+            background: linear-gradient(135deg, #fff5f2 0%, #fffbf0 50%, #f0f7ff 100%);
+        }
+        .neumorphic-card {
+            box-shadow: 8px 8px 16px rgba(238, 91, 43, 0.08), -8px -8px 16px rgba(255, 255, 255, 0.8);
+        }
+        .floating-shape {
+            position: absolute;
+            z-index: 0;
+            opacity: 0.4;
+        }
+    </style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen relative overflow-hidden">
+<!-- Background Elements -->
+<div class="fixed inset-0 pastel-gradient -z-10"></div>
+<div class="floating-shape top-10 left-10 text-primary/20"><span class="material-symbols-outlined text-6xl">star</span></div>
+<div class="floating-shape top-1/4 right-20 text-blue-300/30"><span class="material-symbols-outlined text-8xl">circle</span></div>
+<div class="floating-shape bottom-1/4 left-5 text-yellow-300/30"><span class="material-symbols-outlined text-7xl">change_history</span></div>
+<div class="floating-shape bottom-10 right-10 text-primary/20"><span class="material-symbols-outlined text-5xl">favorite</span></div>
+<div class="relative flex min-h-screen flex-col">
+<!-- Header -->
+<header class="flex items-center justify-between px-6 py-4 bg-white/60 backdrop-blur-md border-b border-primary/10">
+<div class="flex items-center gap-3">
+<div class="size-8 bg-primary rounded-lg flex items-center justify-center text-white">
+<span class="material-symbols-outlined">auto_awesome</span>
+</div>
+<h2 class="text-xl font-bold tracking-tight text-slate-900">RAMA AAI</h2>
+</div>
+<div class="flex items-center gap-4">
+<div class="bg-primary/10 px-4 py-1.5 rounded-full flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-sm">stars</span>
+<span class="font-bold text-primary">120</span>
+</div>
+<button class="size-10 flex items-center justify-center rounded-xl bg-white neumorphic-card text-slate-700">
+<span class="material-symbols-outlined">settings</span>
+</button>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-1 max-w-4xl mx-auto w-full px-6 py-8 flex flex-col items-center">
+<!-- Progress Bar -->
+<div class="w-full max-w-md mb-8">
+<div class="flex justify-between items-end mb-2">
+<span class="text-sm font-bold text-primary uppercase tracking-wider">Level 3: Word Match</span>
+<span class="text-sm font-medium text-slate-500">3 of 5</span>
+</div>
+<div class="h-3 w-full bg-slate-200 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[60%] rounded-full"></div>
+</div>
+</div>
+<!-- Instruction -->
+<h1 class="text-3xl md:text-4xl font-bold text-slate-800 text-center mb-10 leading-tight">
+                Match the word with the picture.
+            </h1>
+<!-- Game Grid -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6 w-full mb-12">
+<!-- Picture Cards -->
+<div class="flex flex-col gap-4 items-center">
+<div class="w-full aspect-square bg-white rounded-xl neumorphic-card p-4 flex items-center justify-center border-2 border-transparent hover:border-primary/30 transition-all">
+<img alt="A cute fluffy orange cat sitting" class="w-full h-full object-cover rounded-lg" data-alt="Cute orange cat sitting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiZ2tMiZzhT4eOdnyGUHHlG-F69SXQYwODSDP4S7zY0I0X6fJCyK7RMRaerpUQXnQoS_RUSz0cncjtAuibZUpRPIphqT2dQzwVdKtVj_IbWXlTpAQWNPuJQpqEIw_mMZXEELq4FngMEs9TPfTuDHD9ZkKS-mf4Z0-MGgijIuzoRqnmFsWse3SHw1KDNAo_d2fU4r9Bnd1rNZqT6_GuHszgO5eml8IIn667EvXuC4p4gwEnGXp6-ln9YA6sK0yAPhCCkajj99X-DEc"/>
+</div>
+<div class="h-14 w-full border-2 border-dashed border-slate-300 rounded-xl bg-slate-50/50"></div>
+</div>
+<div class="flex flex-col gap-4 items-center">
+<div class="w-full aspect-square bg-white rounded-xl neumorphic-card p-4 flex items-center justify-center border-2 border-transparent hover:border-primary/30 transition-all">
+<img alt="A colorful bouncy ball in the grass" class="w-full h-full object-cover rounded-lg" data-alt="Colorful striped beach ball" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_zXba1DzNtyh0pnfjWxiiftTt5zkLjPxM1cD1cILvTa1ABVx35rtMdO8PoWAEir6PT7r4OZXtAWemGzZuGR1aPs5gtwMrQJSFdgMxmBHZoRZRc54SMln-31yZluYAaoJvxp64omOlZG9nkDlv2Gg4BQ9bEw5rLoRCXZR3dSC1m9CkitFyvUmY4E5reWs4aBOiI3GiMVimO8lSCaPDtY7tFC1Gi_53e9WeiXSKHSM_t3htILYTh63m8mJd9RVVHwQAEtO1_01Mkok"/>
+</div>
+<div class="h-14 w-full border-2 border-dashed border-slate-300 rounded-xl bg-slate-50/50"></div>
+</div>
+<div class="flex flex-col gap-4 items-center">
+<div class="w-full aspect-square bg-white rounded-xl neumorphic-card p-4 flex items-center justify-center border-2 border-transparent hover:border-primary/30 transition-all">
+<img alt="A tall leafy green tree in a meadow" class="w-full h-full object-cover rounded-lg" data-alt="Leafy green tree in meadow" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA52KF79g3iruLlR9uUaxBJnf_RbNpyoUwwLdJSOK97WkvfoGrjKJVG54-eGrwF7alz_g5p6aHJVgn1OHJqjzy2gJkIMtNlrqfQyqvVd0hmpCHVXQSdT2IFCrU-AVTvKGHdtLAgpevy8_HPKFq6ztCNAEy_l00LZ4Cv5Bjkpgg9IacmyBPjhf2H6qkBp9OoaAE6MyAHvCMe9OTSfBUxk1IrBIORddB0Bn11MhUzOP4-JF5aTfpy1ko7JrboIuzY8rJeh2oA0oL7i9Y"/>
+</div>
+<div class="h-14 w-full border-2 border-dashed border-slate-300 rounded-xl bg-slate-50/50"></div>
+</div>
+<div class="flex flex-col gap-4 items-center">
+<div class="w-full aspect-square bg-white rounded-xl neumorphic-card p-4 flex items-center justify-center border-2 border-transparent hover:border-primary/30 transition-all">
+<img alt="A bright yellow sun in a blue sky" class="w-full h-full object-cover rounded-lg" data-alt="Bright yellow sun in blue sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDs4ssQC4qU5qn-9Clo8tIBZd383QHeVgzi8peW04RZUwYh_eDco_o_P6IqBczAHMA0MIxRjl0O_TUurzh1cMUBNEwMU-n44UY4f_9jgk2U_Yd-QK29zYIr1kMMegroOAiMd_hzabXdr5uTOCQhMwoDm24P7l-EYx1MWK3CYGMGenRbvqozTPcU11DyzHsSwNFhdYMZKIC4L6WHCpXnoSrK3Ng6ooIdJJzUIsQuRzjOGXA4Mrc886EnwEmIzt-YHXAehkQnrDVxFo"/>
+</div>
+<div class="h-14 w-full border-2 border-dashed border-slate-300 rounded-xl bg-slate-50/50"></div>
+</div>
+</div>
+<!-- Draggable Word Cards -->
+<div class="flex flex-wrap justify-center gap-4 mb-16">
+<div class="px-8 py-3 bg-white rounded-full neumorphic-card border-b-4 border-slate-200 cursor-grab active:cursor-grabbing hover:translate-y-[-2px] transition-all">
+<span class="text-xl font-bold text-slate-700">Cat</span>
+</div>
+<div class="px-8 py-3 bg-white rounded-full neumorphic-card border-b-4 border-slate-200 cursor-grab active:cursor-grabbing hover:translate-y-[-2px] transition-all">
+<span class="text-xl font-bold text-slate-700">Ball</span>
+</div>
+<div class="px-8 py-3 bg-white rounded-full neumorphic-card border-b-4 border-slate-200 cursor-grab active:cursor-grabbing hover:translate-y-[-2px] transition-all">
+<span class="text-xl font-bold text-slate-700">Sun</span>
+</div>
+<div class="px-8 py-3 bg-white rounded-full neumorphic-card border-b-4 border-slate-200 cursor-grab active:cursor-grabbing hover:translate-y-[-2px] transition-all">
+<span class="text-xl font-bold text-slate-700">Tree</span>
+</div>
+</div>
+<!-- Rama Aai Success State -->
+<div class="fixed bottom-24 right-8 flex items-end gap-3 max-w-[280px]">
+<div class="relative bg-white p-4 rounded-2xl rounded-br-none shadow-xl border-2 border-primary/20 mb-10">
+<p class="text-slate-800 font-bold text-lg">Great job! You're a superstar!</p>
+<div class="absolute -bottom-2 right-0 w-4 h-4 bg-white border-r-2 border-b-2 border-primary/20 transform rotate-45"></div>
+</div>
+<div class="relative">
+<div class="absolute -top-12 -left-4 pointer-events-none">
+<span class="material-symbols-outlined text-yellow-400 text-4xl">celebration</span>
+</div>
+<div class="w-20 h-20 rounded-full bg-primary/20 p-1 border-2 border-primary">
+<div class="w-full h-full rounded-full overflow-hidden bg-background-light">
+<img alt="Friendly AI grandmother character" class="w-full h-full object-cover" data-alt="Friendly wise grandmother portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuANMZ8EUqBdVA3dkgrQ6maeLB0GjYJ6DTv-CSgXNDEWoGcQZ-7W2C-8yqHBhiYpG5VIyhObMtRUAG9GDp-etj6nFd_TLkz8PnV6QFBp3o-apFStyRjS8QJJQ-27wjTrUFeRndtgYny4XuJaXEHmgIDp1CABGz-lohFArFReRbDLFSUFKxpxoPJfyPOvTo3FBC2gC_91WpzqwYfy1B5MxKB_ZxiQysBjR8dve9OJFWdCFD4AjDpiKVYxPJ9CIivi0cJkvy_V5MFQPxk"/>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation -->
+<nav class="sticky bottom-0 w-full bg-white/80 backdrop-blur-md border-t border-slate-200 px-6 py-3">
+<div class="max-w-xl mx-auto flex justify-between items-center">
+<button class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">Home</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-primary transition-colors">
+<span class="material-symbols-outlined font-fill" style="font-variation-settings: 'FILL' 1">menu_book</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">Learn</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">mic</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">Speak</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">auto_stories</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">Stories</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">Profile</span>
+</button>
+</div>
+</nav>
+</div>
+</body></html>

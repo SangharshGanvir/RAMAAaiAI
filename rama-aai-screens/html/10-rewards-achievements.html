@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>RAMA AAI - Rewards &amp; Achievements</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ee5b2b",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221510",
+                    },
+                    fontFamily: {
+                        "display": ["Be Vietnam Pro", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    boxShadow: {
+                        'soft': '8px 8px 16px #d1d1d1, -8px -8px 16px #ffffff',
+                        'soft-inset': 'inset 4px 4px 8px #d1d1d1, inset -4px -4px 8px #ffffff',
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .storybook-gradient {
+            background: linear-gradient(135deg, #fffcf9 0%, #feece2 100%);
+        }
+        .badge-gradient-orange { background: linear-gradient(145deg, #ff9d7d, #ee5b2b); }
+        .badge-gradient-blue { background: linear-gradient(145deg, #7dd3fc, #0ea5e9); }
+        .badge-gradient-green { background: linear-gradient(145deg, #86efac, #22c55e); }
+        .badge-gradient-purple { background: linear-gradient(145deg, #d8b4fe, #a855f7); }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased">
+<div class="relative flex min-h-screen w-full flex-col items-center overflow-x-hidden p-4 md:p-8">
+<div class="w-full max-w-[480px] flex flex-col gap-6">
+<header class="flex items-center justify-between bg-white/80 backdrop-blur-md sticky top-0 z-10 px-6 py-4 rounded-xl shadow-soft">
+<div class="flex items-center gap-3">
+<div class="size-10 bg-primary flex items-center justify-center rounded-full text-white">
+<span class="material-symbols-outlined text-2xl">auto_awesome</span>
+</div>
+<h2 class="text-primary text-xl font-extrabold tracking-tight">RAMA AAI</h2>
+</div>
+<div class="flex items-center gap-2 bg-yellow-100 px-4 py-2 rounded-full border-2 border-yellow-400">
+<span class="material-symbols-outlined text-yellow-500 text-2xl" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="text-yellow-700 font-bold text-lg leading-none">542</span>
+</div>
+</header>
+<section class="storybook-gradient rounded-xl p-6 shadow-soft flex flex-col items-center text-center gap-4 relative overflow-hidden">
+<div class="absolute top-0 left-0 w-20 h-20 bg-primary/10 rounded-full -translate-x-10 -translate-y-10 blur-xl"></div>
+<div class="absolute bottom-0 right-0 w-32 h-32 bg-yellow-400/10 rounded-full translate-x-10 translate-y-10 blur-xl"></div>
+<div class="relative w-40 h-40 bg-white rounded-full shadow-soft-inset flex items-center justify-center p-2">
+<div class="w-full h-full rounded-full bg-cover bg-center" data-alt="Grandmother Rama Aai smiling and waving warmly" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDHFvt_7E7IiDagGHbjF_S7Vgk7lx7zNDTQj1e5BSAAU2J3VgmutgAvCsTO-kch4oz5FyJYCIjtxKpQcdFRovJ8gj1zU7hUPKKhEMMPhX9qlTKcfrWD7A5aGSIVlb8dlFKmnoE4hr0ItoLJCxIVkyF_IvLbbv7vASnuRwx79nEfCo8oakSQamXkOMM-X3hYy3rJ280vkPN3umgOjD8Lo-nhms18Az3Cd2yQac1LCCHJ2Qih964TpbhWGdiV7uIJcKi01DWV8Kzev_s');"></div>
+</div>
+<div class="space-y-1">
+<h1 class="text-3xl font-extrabold text-slate-900 leading-tight">You are doing amazing!</h1>
+<p class="text-slate-600 font-medium">Rama Aai is so proud of you!</p>
+</div>
+</section>
+<section>
+<div class="flex items-center justify-between mb-4 px-2">
+<h3 class="text-xl font-bold">Your Badges</h3>
+<span class="text-primary font-bold text-sm">See All</span>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-white p-5 rounded-xl shadow-soft flex flex-col items-center gap-3 text-center transition-transform active:scale-95">
+<div class="size-20 badge-gradient-orange rounded-full flex items-center justify-center shadow-lg text-white">
+<span class="text-4xl font-black">A</span>
+</div>
+<div>
+<p class="font-bold text-slate-800">Alphabet Hero</p>
+<p class="text-xs text-slate-500 font-semibold uppercase tracking-wider">Level 5</p>
+</div>
+</div>
+<div class="bg-white p-5 rounded-xl shadow-soft flex flex-col items-center gap-3 text-center transition-transform active:scale-95">
+<div class="size-20 badge-gradient-blue rounded-full flex items-center justify-center shadow-lg text-white">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1">auto_stories</span>
+</div>
+<div>
+<p class="font-bold text-slate-800">Story Listener</p>
+<p class="text-xs text-slate-500 font-semibold uppercase tracking-wider">10 Stories</p>
+</div>
+</div>
+<div class="bg-white p-5 rounded-xl shadow-soft flex flex-col items-center gap-3 text-center transition-transform active:scale-95">
+<div class="size-20 badge-gradient-green rounded-full flex items-center justify-center shadow-lg text-white">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1">mic</span>
+</div>
+<div>
+<p class="font-bold text-slate-800">Super Speaker</p>
+<p class="text-xs text-slate-500 font-semibold uppercase tracking-wider">Fluent</p>
+</div>
+</div>
+<div class="bg-white p-5 rounded-xl shadow-soft flex flex-col items-center gap-3 text-center transition-transform active:scale-95">
+<div class="size-20 badge-gradient-purple rounded-full flex items-center justify-center shadow-lg text-white">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1">edit</span>
+</div>
+<div>
+<p class="font-bold text-slate-800">Writing Star</p>
+<p class="text-xs text-slate-500 font-semibold uppercase tracking-wider">Great Job</p>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-white/60 p-6 rounded-xl border-4 border-dashed border-primary/20">
+<h3 class="text-xl font-bold mb-4 text-center">Sticker Collection</h3>
+<div class="flex justify-center gap-6 overflow-x-auto pb-2">
+<div class="flex-shrink-0 size-20 bg-white rounded-full shadow-soft flex items-center justify-center transform hover:rotate-6 transition-transform">
+<span class="text-4xl">🦋</span>
+</div>
+<div class="flex-shrink-0 size-20 bg-white rounded-full shadow-soft flex items-center justify-center transform hover:-rotate-3 transition-transform">
+<span class="text-4xl">☀️</span>
+</div>
+<div class="flex-shrink-0 size-20 bg-white rounded-full shadow-soft flex items-center justify-center transform hover:rotate-12 transition-transform">
+<span class="text-4xl">🌈</span>
+</div>
+<div class="flex-shrink-0 size-20 bg-slate-100 rounded-full shadow-soft-inset flex items-center justify-center opacity-40">
+<span class="material-symbols-outlined text-slate-400">lock</span>
+</div>
+</div>
+</section>
+<div class="h-20"></div>
+</div>
+<nav class="fixed bottom-6 left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] max-w-[440px] bg-white shadow-xl rounded-full px-4 py-3 flex justify-between items-center border border-slate-100">
+<button class="flex flex-col items-center gap-1 flex-1 text-slate-400">
+<span class="material-symbols-outlined text-2xl">house</span>
+<span class="text-[10px] font-bold uppercase">Home</span>
+</button>
+<button class="flex flex-col items-center gap-1 flex-1 text-slate-400">
+<span class="material-symbols-outlined text-2xl">school</span>
+<span class="text-[10px] font-bold uppercase">Learn</span>
+</button>
+<button class="flex flex-col items-center gap-1 flex-1 text-slate-400">
+<span class="material-symbols-outlined text-2xl">record_voice_over</span>
+<span class="text-[10px] font-bold uppercase">Speak</span>
+</button>
+<button class="flex flex-col items-center gap-1 flex-1 text-slate-400">
+<span class="material-symbols-outlined text-2xl">auto_stories</span>
+<span class="text-[10px] font-bold uppercase">Stories</span>
+</button>
+<button class="flex flex-col items-center gap-1 flex-1 text-primary">
+<div class="bg-primary/10 rounded-full p-2 mb-[-4px]">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1">person</span>
+</div>
+<span class="text-[10px] font-bold uppercase">Profile</span>
+</button>
+</nav>
+</div>
+</body></html>

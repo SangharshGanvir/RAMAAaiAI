@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Story Time - RAMA AAI</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ee5b2b",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221510",
+                    },
+                    fontFamily: {
+                        "display": ["Be Vietnam Pro"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Be Vietnam Pro', sans-serif; }
+        .story-card-shadow { box-shadow: 0 20px 25px -5px rgba(238, 91, 43, 0.1), 0 10px 10px -5px rgba(238, 91, 43, 0.04); }
+        .page-curl {
+            position: relative;
+        }
+        .page-curl::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, transparent 50%, rgba(238, 91, 43, 0.2) 50%, rgba(255, 255, 255, 0.8) 100%);
+            border-bottom-right-radius: 1.5rem;
+            box-shadow: -2px -2px 5px rgba(0,0,0,0.05);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<div class="flex-1 flex flex-col max-w-[480px] mx-auto w-full bg-white dark:bg-background-dark shadow-xl relative overflow-hidden">
+<header class="relative pt-8 pb-12 px-6 overflow-hidden bg-gradient-to-b from-primary/10 to-transparent">
+<div class="absolute top-4 left-6 flex items-center gap-2">
+<div class="bg-primary p-1.5 rounded-lg text-white">
+<span class="material-symbols-outlined text-xl font-bold">menu_book</span>
+</div>
+<span class="font-bold text-lg tracking-tight text-primary">RAMA AAI</span>
+</div>
+<div class="absolute top-6 right-6 flex gap-1">
+<span class="material-symbols-outlined text-primary/40 text-sm">stars</span>
+<span class="material-symbols-outlined text-primary/60 text-lg">stars</span>
+</div>
+<div class="mt-12 text-center">
+<h1 class="text-2xl font-bold text-slate-800 dark:text-slate-100">Story Time</h1>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Let's explore a new world today!</p>
+</div>
+</header>
+<main class="flex-1 px-6 -mt-8 relative z-10 flex flex-col">
+<div class="page-curl bg-white dark:bg-slate-800 rounded-xl story-card-shadow border border-primary/5 flex flex-col overflow-hidden aspect-[4/5] mb-8">
+<div class="flex-1 bg-center bg-cover bg-no-repeat relative" data-alt="Cute white rabbit sitting in a lush green meadow with flowers" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBF5we9yHTgMZMbNh9Deudn8rb2n0JlyvzB4BWIQLZ9dxigsa0yuwEco1w9rcbuSi7CKy8HYsZ-46Jx_KP0OQGnwSl-vzOFdoc3mCECKrArkuBOW1e_5rTejfEyqDej5QSQlF0wpvnYC0Qgga82hOtaFyeivqWfUMM4TCjU-CeXolRvye2Bd_-v53mORJvyVIkWJuDjkv8X90512fBA0TM1u0suS-PIS8bMTNYJJXgRFKRPgSEypKUzIofbOSj6YhkJZbMvS-fAJYk');">
+<div class="absolute top-4 left-4 bg-white/90 dark:bg-slate-900/90 backdrop-blur-sm px-3 py-1 rounded-full border border-primary/10">
+<span class="text-xs font-bold text-primary">LEVEL 1</span>
+</div>
+</div>
+<div class="p-6 bg-white dark:bg-slate-800">
+<h2 class="text-xl font-bold text-slate-900 dark:text-white mb-1">The Little Rabbit Adventure</h2>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">A magical journey through the green meadow to find the golden carrot.</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 mb-8">
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-xl shadow-lg shadow-primary/20 flex items-center justify-center gap-2 transition-colors">
+<span class="material-symbols-outlined">play_circle</span>
+                    Play Story
+                </button>
+<div class="flex gap-3">
+<button class="flex-1 bg-primary/10 hover:bg-primary/20 text-primary font-bold py-3 rounded-xl flex items-center justify-center gap-2 transition-colors">
+<span class="material-symbols-outlined text-lg">auto_stories</span>
+                        Next Page
+                    </button>
+<button class="flex-1 bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 text-slate-700 dark:text-slate-200 font-bold py-3 rounded-xl flex items-center justify-center gap-2 transition-colors">
+<span class="material-symbols-outlined text-lg">psychology</span>
+                        Ask Rama
+                    </button>
+</div>
+</div>
+<div class="absolute bottom-24 right-6 flex flex-col items-center">
+<div class="relative">
+<div class="absolute -top-12 -left-32 bg-white dark:bg-slate-800 p-3 rounded-2xl rounded-tr-none border border-primary/10 shadow-lg text-xs font-medium max-w-[140px] text-slate-700 dark:text-slate-300">
+                        "Would you like to hear about the rabbit's ears?"
+                    </div>
+<div class="size-16 rounded-full border-4 border-white dark:border-slate-800 shadow-xl overflow-hidden bg-primary/20 flex items-center justify-center ring-2 ring-primary">
+<img class="size-full object-cover" data-alt="Friendly AI character avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFR-nrJq7ufcje1NiFhLY5D6Iv7V04y3vpeVvzH9xD4u7Ivgw_uilAMGzNuwjxEDUJtfEZO6ofHPaS3ukjHh0N1woPKdPgGqmPLHzRo0UuEQiTvp3jCt4FwvICOwZSDwwv81aHkNEh1YWfR4NTu8gIjv9oTrtET9V2y6vioI7Ii5NQoTNYK7dV6bF54KBGWgwg0ywHw8MtRrt_rIRJB2Lv2VPsDHjC5Lh4qqdeyOyOdvW5gHxwZ_jpime3B-q6ucHNUQfW_K_c6EA"/>
+</div>
+</div>
+</div>
+</main>
+<nav class="border-t border-slate-100 dark:border-slate-800 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md px-4 py-3">
+<div class="flex justify-between items-center max-w-md mx-auto">
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">school</span>
+<span class="text-[10px] font-medium">Learn</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">mic_none</span>
+<span class="text-[10px] font-medium">Speak</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">book_4</span>
+<span class="text-[10px] font-bold">Stories</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-medium">Profile</span>
+</a>
+</div>
+</nav>
+</div>
+</body></html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ee5b2b",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221510",
+                    },
+                    fontFamily: {
+                        "display": ["Be Vietnam Pro", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .storybook-gradient {
+            background: linear-gradient(180deg, #e0f2fe 0%, #fce7f3 100%);
+        }
+        .soft-float {
+            filter: drop-shadow(0 10px 15px rgba(238, 91, 43, 0.1));
+        }
+    </style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark min-h-screen">
+<div class="relative flex h-screen w-full flex-col group/design-root overflow-hidden storybook-gradient">
+<header class="flex items-center justify-between px-6 py-4 lg:px-10">
+<div class="flex items-center gap-3 text-primary">
+<div class="size-8 flex items-center justify-center bg-white rounded-full shadow-sm">
+<span class="material-symbols-outlined text-primary text-2xl" data-icon="Auto_Awesome">auto_awesome</span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-xl font-extrabold leading-tight tracking-tight">Rama AAI</h2>
+</div>
+<div class="flex items-center gap-3">
+<div class="flex items-center gap-2 bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full shadow-sm border border-primary/10">
+<span class="material-symbols-outlined text-yellow-500 fill-1" data-icon="Star">star</span>
+<span class="text-slate-900 font-bold text-sm">0 Stars</span>
+</div>
+<button class="flex items-center justify-center size-10 rounded-full bg-white/80 backdrop-blur-sm text-slate-700 shadow-sm border border-primary/10">
+<span class="material-symbols-outlined" data-icon="Settings">settings</span>
+</button>
+</div>
+</header>
+<main class="flex-1 flex flex-col items-center justify-center px-6 relative">
+<div class="absolute top-10 left-10 text-primary/30 rotate-12">
+<span class="material-symbols-outlined text-6xl" data-icon="Cloud">cloud</span>
+</div>
+<div class="absolute top-40 right-12 text-pink-400/40 -rotate-12">
+<span class="material-symbols-outlined text-4xl" data-icon="Flutter_Dash">flutter_dash</span>
+</div>
+<div class="absolute bottom-20 left-20 text-yellow-400/40">
+<span class="material-symbols-outlined text-3xl" data-icon="Star">star</span>
+</div>
+<div class="w-full max-w-md flex flex-col items-center text-center space-y-8">
+<div class="relative w-64 h-64 lg:w-80 lg:h-80 bg-white/40 rounded-full flex items-center justify-center p-4 soft-float">
+<div class="w-full h-full rounded-full bg-cover bg-center border-8 border-white shadow-xl" data-alt="Smiling kind grandmother character with warm eyes and traditional clothing" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDP3qxvpHijpU4izbHFUPcdlUDyvX4TtuLWSr7fpa8lS3Py-hwGr3IeMtpUwcqxvlysmh7b9YyFPCCo_ovz7rfg1z5dPds9zZ6s51nrVQAUbMUB2JLELarjziPuKY9JJDHFGtOal8jwG2ZcASfRwILKtoOVFLQFUC9yvy4fa8e_zOfjqGDYKBKIKEfb0YIXiDwPMoxHrK-f7HnNTGcfOH1xIEiOZFrY4jOnRh0Ng7l-351SofiI-TzmmSi3aQcTH3ugo4iG_AvY53I");'>
+</div>
+<div class="absolute -bottom-2 -right-2 bg-primary text-white p-3 rounded-full shadow-lg">
+<span class="material-symbols-outlined text-3xl" data-icon="Waving_Hand">waving_hand</span>
+</div>
+</div>
+<div class="space-y-3">
+<h3 class="text-primary font-bold text-lg tracking-widest uppercase">My Loving Learning Companion</h3>
+<h1 class="text-slate-900 dark:text-slate-100 text-4xl lg:text-5xl font-extrabold leading-tight">
+                        Hello little explorer! <br/>
+<span class="text-primary">I am Rama Aai.</span>
+</h1>
+<p class="text-slate-600 dark:text-slate-400 text-xl font-medium">
+                        Let's learn English together.
+                    </p>
+</div>
+<div class="w-full flex flex-col gap-4 pt-4">
+<button class="group relative flex w-full items-center justify-center gap-3 overflow-hidden rounded-2xl bg-primary h-16 px-8 text-white text-xl font-bold shadow-lg shadow-primary/30 active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-2xl" data-icon="Play_Circle">play_circle</span>
+<span>Start Learning</span>
+</button>
+<button class="flex w-full items-center justify-center gap-3 overflow-hidden rounded-2xl bg-white/80 backdrop-blur-sm h-16 px-8 text-slate-800 text-xl font-bold border-2 border-primary/20 hover:bg-white shadow-sm active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-2xl text-primary" data-icon="Face_5">face_5</span>
+<span>Customize Rama Aai</span>
+</button>
+</div>
+</div>
+</main>
+<footer class="p-6 flex justify-center gap-8 text-slate-400">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="Verified_User">verified_user</span>
+<span class="text-xs font-bold uppercase tracking-tighter">Safe for Kids</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="Menu_Book">menu_book</span>
+<span class="text-xs font-bold uppercase tracking-tighter">Story Mode</span>
+</div>
+</footer>
+<div class="absolute bottom-0 left-0 w-full h-32 pointer-events-none opacity-50" data-alt="Soft white mist gradient at the bottom" style="background: linear-gradient(to top, white, transparent);">
+</div>
+</div>
+</body></html>

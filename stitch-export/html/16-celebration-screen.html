@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Celebration - RAMA AAI</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ee5b2b",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221510",
+                    },
+                    fontFamily: {
+                        "display": ["Be Vietnam Pro"]
+                    },
+                    borderRadius: { "DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        .confetti {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            border-radius: 2px;
+        }
+        .cloud {
+            filter: blur(20px);
+            opacity: 0.6;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display overflow-hidden">
+<div class="relative flex h-screen w-full flex-col items-center justify-center overflow-hidden bg-gradient-to-b from-orange-50 to-white dark:from-background-dark dark:to-stone-900">
+<div class="absolute inset-0 pointer-events-none overflow-hidden">
+<div class="cloud absolute -top-10 -left-10 w-64 h-64 bg-white rounded-full"></div>
+<div class="cloud absolute top-40 -right-20 w-80 h-80 bg-orange-100 rounded-full"></div>
+<div class="cloud absolute bottom-20 -left-20 w-96 h-96 bg-orange-50 rounded-full opacity-40"></div>
+<div class="confetti bg-primary left-[10%] top-[20%] rotate-12"></div>
+<div class="confetti bg-yellow-400 left-[25%] top-[15%] -rotate-12"></div>
+<div class="confetti bg-blue-400 right-[15%] top-[25%] rotate-45"></div>
+<div class="confetti bg-green-400 right-[30%] top-[10%] -rotate-6"></div>
+<div class="confetti bg-primary left-[45%] top-[5%] rotate-12"></div>
+<div class="confetti bg-yellow-300 left-[5%] bottom-[30%] rotate-12"></div>
+<div class="confetti bg-primary right-[10%] bottom-[40%] -rotate-12"></div>
+</div>
+<div class="z-10 flex flex-col items-center text-center px-6 max-w-md w-full">
+<div class="relative mb-8">
+<div class="absolute inset-0 bg-primary/20 blur-3xl rounded-full scale-150"></div>
+<div class="relative w-64 h-64 rounded-full border-8 border-white dark:border-stone-800 shadow-2xl overflow-hidden bg-white">
+<img alt="Happy grandmother character clapping" class="w-full h-full object-cover" data-alt="Friendly Rama Aai character clapping happily" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-rB59PU7Ae-VztDmrEf1CO_vXkHdyrzUZnI25xmSG5c5DscdDkqn6HQcp8x7tkyC3qasczoxBuRlf4efQU5rHRY8cAPyUX2BymyA6gxOpGb5EndhAQrvZv8sATlhVpPaKZWu6PynSI7XPGTWsVhi6Wn0atKOV4DWg8mQ-yx7h2HxZbCv3jUF9yylgeN8RyShKjkZeCxvFIh4gruSl6-slByWWKLWa-vhz5AYxn_We2mTS_t2fQrFVMECVzmBmW2AfFOL3PGSIgU0"/>
+</div>
+<div class="absolute -bottom-6 left-1/2 -translate-x-1/2 bg-yellow-400 p-4 rounded-full shadow-lg border-4 border-white animate-bounce">
+<span class="material-symbols-outlined text-white text-5xl !fill-1">star</span>
+</div>
+</div>
+<div class="space-y-4 mb-10">
+<h1 class="text-slate-900 dark:text-slate-100 text-4xl font-bold leading-tight tracking-tight">
+                    Wonderful job!
+                </h1>
+<p class="text-primary text-2xl font-semibold">
+                    You earned a star!
+                </p>
+</div>
+<div class="flex flex-col w-full gap-4">
+<button class="w-full py-4 px-8 bg-primary text-white rounded-xl text-xl font-bold shadow-lg shadow-primary/30 hover:scale-105 transition-transform">
+                    Next Adventure
+                </button>
+<button class="w-full py-4 px-8 bg-primary/10 text-primary rounded-xl text-xl font-bold hover:bg-primary/20 transition-colors">
+                    Play Again
+                </button>
+</div>
+</div>
+<div class="fixed bottom-0 left-0 right-0 z-20 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-t border-primary/10">
+<div class="max-w-md mx-auto flex justify-around py-3 px-4">
+<div class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined text-2xl">home</span>
+<span class="text-[10px] font-medium">Home</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-2xl !fill-1">auto_stories</span>
+<span class="text-[10px] font-medium">Learn</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined text-2xl">mic</span>
+<span class="text-[10px] font-medium">Speak</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined text-2xl">menu_book</span>
+<span class="text-[10px] font-medium">Stories</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined text-2xl">person</span>
+<span class="text-[10px] font-medium">Profile</span>
+</div>
+</div>
+</div>
+</div>
+</body></html>
