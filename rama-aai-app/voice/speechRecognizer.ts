@@ -10,6 +10,7 @@ export class SpeechRecognizer {
         this.recognition.continuous = false;
         this.recognition.interimResults = false;
         this.recognition.lang = 'en-US';
+        this.recognition.maxAlternatives = 3;
       }
     }
   }
