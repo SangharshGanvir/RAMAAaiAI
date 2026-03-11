@@ -6,7 +6,7 @@ import { useRouter, useParams } from 'next/navigation';
 import { pageTransition, buttonHover, buttonTap } from '@/utils/animations';
 import { VoiceSynthesizer } from '@/voice/voiceSynthesizer';
 import { Story } from '@/types';
-import { getStoryByDifficulty } from '@/ai/storyGenerator';
+import { getStoryById, getAllStories } from '@/ai/storyGenerator';
 import { addStoryCompleted } from '@/progress/progressTracker';
 import CelebrationAnimation from '@/components/CelebrationAnimation';
 
@@ -22,48 +22,78 @@ export default function StoryDetailPage() {
   useEffect(() => {
     // Load story based on ID
     const storyId = params.id as string;
-    let loadedStory: Story;
+    const loadedStory = getStoryById(storyId);
     
-    if (storyId.includes('easy')) {
-      loadedStory = getStoryByDifficulty('easy');
-    } else if (storyId.includes('medium')) {
-      loadedStory = getStoryByDifficulty('medium');
+    if (loadedStory) {
+      setStory(loadedStory);
     } else {
-      loadedStory = getStoryByDifficulty('hard');
+      // Fallback: get first story from all stories
+      const allStories = getAllStories();
+      setStory(allStories[0]);
     }
-    
-    setStory(loadedStory);
   }, [params.id]);
 
   const playStory = async () => {
     if (!story) return;
     
-    setIsPlaying(true);
-    
-    for (let i = 0; i < story.content.length; i++) {
-      setCurrentSentenceIndex(i);
-      await voiceSynth.speak(story.content[i]);
+    try {
+      setIsPlaying(true);
+      
+      // Warm grandmother introduction
+      await voiceSynth.speak(`Let me tell you a wonderful story, my dear.`);
+      await new Promise(resolve => setTimeout(resolve, 800));
+      await voiceSynth.speak(story.title.replace(/[^\w\s]/g, ''));
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
+      // Read each sentence with pauses
+      for (let i = 0; i < story.content.length; i++) {
+        setCurrentSentenceIndex(i);
+        // Remove emojis for speech but keep text readable
+        const textToSpeak = story.content[i].replace(/[\u{1F300}-\u{1F9FF}]/gu, '').trim();
+        await voiceSynth.speak(textToSpeak);
+        await new Promise(resolve => setTimeout(resolve, 1200)); // Longer pause between sentences
+      }
+      
+      // Pause before moral
+      await new Promise(resolve => setTimeout(resolve, 1500));
+      await voiceSynth.speak(`And the lesson of this story is:`);
       await new Promise(resolve => setTimeout(resolve, 500));
+      await voiceSynth.speak(story.moral);
+      
+      // Ask the question at the end
+      if (story.question) {
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        await voiceSynth.speak(`Now, let me ask you something, dear.`);
+        await new Promise(resolve => setTimeout(resolve, 500));
+        await voiceSynth.speak(story.question);
+      }
+      
+      await new Promise(resolve => setTimeout(resolve, 800));
+      await voiceSynth.speak(`What a lovely story! You did wonderfully listening, my dear.`);
+      
+      setIsPlaying(false);
+      setShowCelebration(true);
+      addStoryCompleted(story.id);
+      
+      setTimeout(() => {
+        setShowCelebration(false);
+      }, 3000);
+    } catch (error) {
+      console.error('Error playing story:', error);
+      setIsPlaying(false);
     }
-    
-    // Ask the question at the end
-    if (story.question) {
-      await voiceSynth.speak(story.question);
-    }
-    
-    setIsPlaying(false);
-    setShowCelebration(true);
-    addStoryCompleted(story.id);
-    
-    setTimeout(() => {
-      setShowCelebration(false);
-    }, 3000);
   };
 
   const playSentence = async (index: number) => {
-    if (!story) return;
-    setCurrentSentenceIndex(index);
-    await voiceSynth.speak(story.content[index]);
+    if (!story || isPlaying) return;
+    
+    try {
+      setCurrentSentenceIndex(index);
+      const textToSpeak = story.content[index].replace(/[\u{1F300}-\u{1F9FF}]/gu, '').trim();
+      await voiceSynth.speak(textToSpeak);
+    } catch (error) {
+      console.error('Error playing sentence:', error);
+    }
   };
 
   if (!story) {
@@ -106,30 +136,61 @@ export default function StoryDetailPage() {
             </span>
           </div>
 
-          <div className="space-y-4 mb-8">
-            {story.content.map((sentence, index) => (
-              <motion.div
-                key={index}
-                className={`p-4 rounded-lg cursor-pointer transition-all ${
-                  currentSentenceIndex === index
-                    ? 'bg-orange-100 border-2 border-orange-400'
-                    : 'bg-gray-50 hover:bg-gray-100'
-                }`}
-                onClick={() => playSentence(index)}
-                whileHover={buttonHover}
-                whileTap={buttonTap}
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: index * 0.1 }}
-              >
-                <p className="text-lg">{sentence}</p>
-              </motion.div>
-            ))}
+          <div className="space-y-6 mb-8">
+            {story.content.map((sentence, index) => {
+              // Extract emojis from sentence
+              const emojiMatch = sentence.match(/[\u{1F300}-\u{1F9FF}]+/gu);
+              const textOnly = sentence.replace(/[\u{1F300}-\u{1F9FF}]/gu, '').trim();
+              
+              return (
+                <motion.div
+                  key={index}
+                  className={`p-6 rounded-xl cursor-pointer transition-all ${
+                    currentSentenceIndex === index
+                      ? 'bg-orange-100 border-2 border-orange-400 shadow-lg'
+                      : 'bg-gradient-to-r from-purple-50 to-pink-50 hover:shadow-md border-2 border-transparent'
+                  }`}
+                  onClick={() => playSentence(index)}
+                  whileHover={buttonHover}
+                  whileTap={buttonTap}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: index * 0.1 }}
+                >
+                  <div className="flex items-center gap-4">
+                    {emojiMatch && (
+                      <div className="text-6xl flex-shrink-0">
+                        {emojiMatch[0]}
+                      </div>
+                    )}
+                    <p className="text-xl text-gray-800 leading-relaxed flex-1">
+                      {textOnly}
+                    </p>
+                  </div>
+                </motion.div>
+              );
+            })}
           </div>
+
+          {story.moral && (
+            <motion.div
+              className="bg-gradient-to-r from-green-50 to-emerald-50 p-6 rounded-xl mb-6 border-2 border-green-200"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.3 }}
+            >
+              <p className="text-lg font-medium text-green-900 mb-2">
+                💡 Moral of the Story:
+              </p>
+              <p className="text-xl text-green-800 italic">
+                {story.moral}
+              </p>
+            </motion.div>
+          )}
 
           {story.question && (
             <motion.div
-              className="bg-blue-50 p-6 rounded-lg mb-6"
+              className="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-xl mb-6 border-2 border-blue-200"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5 }}

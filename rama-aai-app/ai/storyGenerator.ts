@@ -527,6 +527,11 @@ export function getStoriesByDifficulty(difficulty: 'easy' | 'medium' | 'hard'): 
   return allStories.filter(s => s.difficulty === difficulty);
 }
 
+export function getStoryById(id: string): Story | null {
+  const allStories = getDefaultStories();
+  return allStories.find(s => s.id === id) || null;
+}
+
 export function getStoryByDifficulty(difficulty: 'easy' | 'medium' | 'hard'): Story {
   const topics = {
     easy: 'bunny',
