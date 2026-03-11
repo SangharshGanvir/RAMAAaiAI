@@ -18,9 +18,16 @@ export default function CelebrationAnimation() {
             left: `${Math.random() * 100}%`,
             top: '-10%',
           }}
-          {...confettiAnimation}
+          initial={{ y: -100, opacity: 0 }}
+          animate={{
+            y: [0, 100, 200],
+            opacity: [0, 1, 0],
+            x: [-50, 0, 50],
+            rotate: [0, 360, 720],
+          }}
           transition={{
-            ...confettiAnimation.animate.transition,
+            duration: 2,
+            ease: "easeOut",
             delay: i * 0.05,
           }}
         />
