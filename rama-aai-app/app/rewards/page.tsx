@@ -64,7 +64,6 @@ export default function RewardsPage() {
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 0.3 + index * 0.1 }}
-                  {...starBurst}
                 >
                   <div className="text-6xl">{badge.icon}</div>
                   <h3 className="text-lg font-bold text-center">{badge.name}</h3>
