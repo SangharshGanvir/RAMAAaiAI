@@ -68,33 +68,49 @@ export class VoiceSynthesizer {
   }
 
   async speak(text: string, options?: { rate?: number; pitch?: number; volume?: number }): Promise<void> {
-    return new Promise(async (resolve, reject) => {
-      if (!this.synth) {
-        reject('Speech synthesis not supported');
-        return;
-      }
+    if (!this.synth) {
+      console.error('Speech synthesis not supported');
+      return;
+    }
 
+    try {
       // Wait for voices to load
       await this.waitForVoices();
 
-      const utterance = new SpeechSynthesisUtterance(text);
-      
-      // Select female voice
-      const femaleVoice = this.selectFemaleVoice();
-      if (femaleVoice) {
-        utterance.voice = femaleVoice;
-      }
+      // Cancel any ongoing speech
+      this.synth.cancel();
 
-      // Slower rate and slightly higher pitch for grandmother voice
-      utterance.rate = options?.rate || 0.85;
-      utterance.pitch = options?.pitch || 1.15;
-      utterance.volume = options?.volume || 1.0;
+      return new Promise((resolve, reject) => {
+        const utterance = new SpeechSynthesisUtterance(text);
+        
+        // Select female voice
+        const femaleVoice = this.selectFemaleVoice();
+        if (femaleVoice) {
+          utterance.voice = femaleVoice;
+        }
 
-      utterance.onend = () => resolve();
-      utterance.onerror = (error) => reject(error);
+        // Slower rate and slightly higher pitch for grandmother voice
+        utterance.rate = options?.rate || 0.85;
+        utterance.pitch = options?.pitch || 1.15;
+        utterance.volume = options?.volume || 1.0;
 
-      this.synth.speak(utterance);
-    });
+        utterance.onend = () => {
+          resolve();
+        };
+        
+        utterance.onerror = (event) => {
+          console.error('Speech synthesis error:', event);
+          resolve(); // Resolve instead of reject to prevent unhandled errors
+        };
+
+        if (this.synth) {
+          this.synth.speak(utterance);
+        }
+      });
+    } catch (error) {
+      console.error('Voice synthesis error:', error);
+      return;
+    }
   }
 
   stop(): void {

@@ -12,12 +12,25 @@ export default function StoryLibraryPage() {
   const [stories, setStories] = useState<Story[]>([]);
 
   useEffect(() => {
-    const defaultStories = [
-      getStoryByDifficulty('easy'),
-      getStoryByDifficulty('medium'),
-      getStoryByDifficulty('hard'),
-    ];
-    setStories(defaultStories);
+    // Get all stories from the story generator
+    const allStories: Story[] = [];
+    
+    // Get 10 easy stories
+    for (let i = 1; i <= 10; i++) {
+      allStories.push(getStoryByDifficulty('easy'));
+    }
+    
+    // Get 10 medium stories
+    for (let i = 1; i <= 10; i++) {
+      allStories.push(getStoryByDifficulty('medium'));
+    }
+    
+    // Get 10 hard stories
+    for (let i = 1; i <= 10; i++) {
+      allStories.push(getStoryByDifficulty('hard'));
+    }
+    
+    setStories(allStories);
   }, []);
 
   return (
@@ -48,10 +61,10 @@ export default function StoryLibraryPage() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2 }}
         >
-          Choose a story to listen to with Rama Aai
+          Choose a story to listen to with Rama Aai - 30 Stories Available!
         </motion.p>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-6 max-h-[70vh] overflow-y-auto pr-4">
           {stories.map((story, index) => (
             <motion.div
               key={story.id}

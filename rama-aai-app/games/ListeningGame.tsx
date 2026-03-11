@@ -21,22 +21,33 @@ export default function ListeningGame({ word, images, onComplete }: ListeningGam
   }, []);
 
   const playWord = async () => {
-    setIsPlaying(true);
-    await voiceSynth.speak(`Listen carefully. ${word}`);
-    setHasPlayed(true);
-    setIsPlaying(false);
+    try {
+      setIsPlaying(true);
+      await voiceSynth.speak(`Listen carefully. ${word}`);
+      setHasPlayed(true);
+    } catch (error) {
+      console.error('Error playing word:', error);
+      setHasPlayed(true);
+    } finally {
+      setIsPlaying(false);
+    }
   };
 
   const handleImageClick = async (selectedWord: string) => {
     if (isPlaying) return;
     
-    setIsPlaying(true);
-    if (selectedWord === word) {
-      await voiceSynth.speak('Wonderful! That is correct!');
-      setIsPlaying(false);
-      onComplete(100);
-    } else {
-      await voiceSynth.speak('Try again, my dear.');
+    try {
+      setIsPlaying(true);
+      if (selectedWord === word) {
+        await voiceSynth.speak('Wonderful! That is correct!');
+        setIsPlaying(false);
+        onComplete(100);
+      } else {
+        await voiceSynth.speak('Try again, my dear.');
+        setIsPlaying(false);
+      }
+    } catch (error) {
+      console.error('Error in handleImageClick:', error);
       setIsPlaying(false);
     }
   };
