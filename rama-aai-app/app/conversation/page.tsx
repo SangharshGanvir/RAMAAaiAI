@@ -139,10 +139,10 @@ export default function ConversationPage() {
                   initial={{ opacity: 0, x: msg.role === 'user' ? 20 : -20 }}
                   animate={{ opacity: 1, x: 0 }}
                 >
-                  <p className="font-medium mb-1">
+                  <p className="font-medium mb-1 text-gray-900">
                     {msg.role === 'user' ? 'You' : 'Rama Aai'}
                   </p>
-                  <p>{msg.content}</p>
+                  <p className="text-gray-800">{msg.content}</p>
                 </motion.div>
               ))}
             </div>
