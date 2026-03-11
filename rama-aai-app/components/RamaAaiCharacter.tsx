@@ -10,7 +10,15 @@ export default function RamaAaiCharacter() {
   return (
     <motion.div
       className="relative w-48 h-48 mx-auto"
-      {...characterBounce}
+      animate={{
+        y: [0, -15, 0],
+      }}
+      transition={{
+        duration: 1,
+        repeat: Infinity,
+        repeatType: "reverse" as const,
+        ease: "easeInOut",
+      }}
     >
       <div className="w-full h-full rounded-full flex items-center justify-center text-8xl"
            style={{ backgroundColor: avatar.sareeColor + '20' }}>

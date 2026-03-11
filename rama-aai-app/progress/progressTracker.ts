@@ -55,7 +55,12 @@ export function addStoryCompleted(storyId: string): void {
 
 export function updatePronunciationScore(word: string, score: number): void {
   const progress = getProgress();
-  progress.pronunciationScores[word] = score;
+  progress.pronunciationScores.push({
+    word,
+    spokenText: word,
+    score,
+    timestamp: new Date(),
+  });
   if (score >= 80) {
     progress.totalStars += 2;
   }
@@ -148,10 +153,10 @@ function hasBadge(progress: LearningProgress, badgeId: string): boolean {
 export function getCurrentLevel(progress: LearningProgress): LearningLevel {
   const totalLearned = progress.lettersLearned.length + progress.wordsLearned.length;
   
-  if (totalLearned < 10) return 'Alphabet Explorer';
-  if (totalLearned < 30) return 'Word Builder';
-  if (totalLearned < 60) return 'Sentence Maker';
-  return 'Story Speaker';
+  if (totalLearned < 10) return 'alphabet';
+  if (totalLearned < 30) return 'word';
+  if (totalLearned < 60) return 'sentence';
+  return 'story';
 }
 
 function getDefaultProgress(): LearningProgress {
@@ -159,12 +164,12 @@ function getDefaultProgress(): LearningProgress {
     lettersLearned: [],
     wordsLearned: [],
     storiesCompleted: [],
-    pronunciationScores: {},
+    pronunciationScores: [],
     dailyStreak: 0,
     lastActiveDate: '',
     totalStars: 0,
     badges: [],
-    currentLevel: 'Alphabet Explorer',
+    currentLevel: 'alphabet',
   };
 }
 
