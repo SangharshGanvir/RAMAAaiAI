@@ -174,6 +174,285 @@ export const dictionaryEntries: DictionaryEntry[] = [
     synonyms: ['soft', 'tender', 'mild'],
     antonyms: ['rough', 'harsh']
   },
+  {
+    word: 'tree',
+    definition: 'A tall plant with a wooden trunk, branches, and leaves.',
+    example: 'The bird built a nest in the tree.',
+    category: 'nature',
+    difficulty: 'easy',
+    synonyms: ['plant']
+  },
+  {
+    word: 'house',
+    definition: 'A building where people live.',
+    example: 'My house has a red door.',
+    category: 'places',
+    difficulty: 'easy',
+    synonyms: ['home']
+  },
+  {
+    word: 'water',
+    definition: 'A clear liquid that we drink and that falls from the sky as rain.',
+    example: 'I drink water when I am thirsty.',
+    category: 'nature',
+    difficulty: 'easy'
+  },
+  {
+    word: 'bird',
+    definition: 'An animal with wings and feathers that can usually fly.',
+    example: 'The bird sang a beautiful song.',
+    category: 'animals',
+    difficulty: 'easy'
+  },
+  {
+    word: 'flower',
+    definition: 'The colorful part of a plant that smells nice.',
+    example: 'I picked a flower for my mom.',
+    category: 'nature',
+    difficulty: 'easy',
+    synonyms: ['bloom', 'blossom']
+  },
+  {
+    word: 'smile',
+    definition: 'To make your mouth curve up when you are happy.',
+    example: 'She has a big smile on her face.',
+    category: 'actions',
+    difficulty: 'easy',
+    synonyms: ['grin'],
+    antonyms: ['frown']
+  },
+  {
+    word: 'play',
+    definition: 'To have fun doing games or activities.',
+    example: 'I love to play with my toys.',
+    category: 'actions',
+    difficulty: 'easy',
+    antonyms: ['work']
+  },
+  {
+    word: 'learn',
+    definition: 'To get new knowledge or skills by studying or practicing.',
+    example: 'I learn new things at school every day.',
+    category: 'actions',
+    difficulty: 'easy',
+    synonyms: ['study'],
+    antonyms: ['forget']
+  },
+  {
+    word: 'help',
+    definition: 'To make something easier for someone or do something useful for them.',
+    example: 'I help my mom cook dinner.',
+    category: 'actions',
+    difficulty: 'easy',
+    synonyms: ['assist', 'aid']
+  },
+  {
+    word: 'kind',
+    definition: 'Friendly, caring, and helpful to others.',
+    example: 'She is very kind to animals.',
+    category: 'descriptors',
+    difficulty: 'easy',
+    synonyms: ['nice', 'caring'],
+    antonyms: ['mean', 'cruel']
+  },
+  {
+    word: 'beautiful',
+    definition: 'Very pretty or pleasing to look at.',
+    example: 'The sunset is beautiful tonight.',
+    category: 'descriptors',
+    difficulty: 'medium',
+    synonyms: ['pretty', 'lovely'],
+    antonyms: ['ugly']
+  },
+  {
+    word: 'family',
+    definition: 'People who are related to you, like parents, siblings, and grandparents.',
+    example: 'I love spending time with my family.',
+    category: 'relationships',
+    difficulty: 'easy'
+  },
+  {
+    word: 'school',
+    definition: 'A place where children go to learn.',
+    example: 'I go to school five days a week.',
+    category: 'places',
+    difficulty: 'easy'
+  },
+  {
+    word: 'teacher',
+    definition: 'A person who helps students learn.',
+    example: 'My teacher is very patient and helpful.',
+    category: 'people',
+    difficulty: 'easy',
+    synonyms: ['instructor', 'educator']
+  },
+  {
+    word: 'student',
+    definition: 'A person who is learning at a school.',
+    example: 'Every student in the class raised their hand.',
+    category: 'people',
+    difficulty: 'easy',
+    synonyms: ['pupil', 'learner']
+  },
+  {
+    word: 'color',
+    definition: 'What something looks like - red, blue, green, yellow, etc.',
+    example: 'What is your favorite color?',
+    category: 'descriptors',
+    difficulty: 'easy',
+    synonyms: ['hue', 'shade']
+  },
+  {
+    word: 'music',
+    definition: 'Pleasant sounds made by singing or playing instruments.',
+    example: 'I love listening to music.',
+    category: 'arts',
+    difficulty: 'easy'
+  },
+  {
+    word: 'dance',
+    definition: 'To move your body to music.',
+    example: 'We dance at the party.',
+    category: 'actions',
+    difficulty: 'easy'
+  },
+  {
+    word: 'sing',
+    definition: 'To make music with your voice.',
+    example: 'I sing my favorite song in the shower.',
+    category: 'actions',
+    difficulty: 'easy'
+  },
+  {
+    word: 'draw',
+    definition: 'To make pictures with a pencil, pen, or crayon.',
+    example: 'I like to draw pictures of animals.',
+    category: 'actions',
+    difficulty: 'easy',
+    synonyms: ['sketch']
+  },
+  {
+    word: 'paint',
+    definition: 'To make pictures using colors and a brush.',
+    example: 'We paint in art class.',
+    category: 'actions',
+    difficulty: 'easy'
+  },
+  {
+    word: 'story',
+    definition: 'A tale about people or events, real or imaginary.',
+    example: 'Grandma tells me a story before bed.',
+    category: 'objects',
+    difficulty: 'easy',
+    synonyms: ['tale', 'narrative']
+  },
+  {
+    word: 'adventure',
+    definition: 'An exciting experience or journey.',
+    example: 'Going camping was a great adventure.',
+    category: 'concepts',
+    difficulty: 'medium',
+    synonyms: ['journey', 'quest']
+  },
+  {
+    word: 'dream',
+    definition: 'Pictures and stories that happen in your mind while you sleep.',
+    example: 'I had a dream about flying last night.',
+    category: 'concepts',
+    difficulty: 'easy'
+  },
+  {
+    word: 'sleep',
+    definition: 'To rest with your eyes closed and your mind not awake.',
+    example: 'I sleep eight hours every night.',
+    category: 'actions',
+    difficulty: 'easy',
+    synonyms: ['rest', 'slumber'],
+    antonyms: ['wake']
+  },
+  {
+    word: 'wake',
+    definition: 'To stop sleeping and become conscious.',
+    example: 'I wake up at seven in the morning.',
+    category: 'actions',
+    difficulty: 'easy',
+    antonyms: ['sleep']
+  },
+  {
+    word: 'morning',
+    definition: 'The early part of the day, from sunrise to noon.',
+    example: 'I eat breakfast in the morning.',
+    category: 'time',
+    difficulty: 'easy',
+    antonyms: ['evening', 'night']
+  },
+  {
+    word: 'night',
+    definition: 'The time when it is dark outside and most people sleep.',
+    example: 'The stars come out at night.',
+    category: 'time',
+    difficulty: 'easy',
+    antonyms: ['day', 'morning']
+  },
+  {
+    word: 'day',
+    definition: 'The time when the sun is up and it is light outside.',
+    example: 'We play outside during the day.',
+    category: 'time',
+    difficulty: 'easy',
+    antonyms: ['night']
+  },
+  {
+    word: 'moon',
+    definition: 'The bright round object you see in the sky at night.',
+    example: 'The moon is full tonight.',
+    category: 'nature',
+    difficulty: 'easy',
+    antonyms: ['sun']
+  },
+  {
+    word: 'star',
+    definition: 'A tiny bright light you see in the night sky.',
+    example: 'I made a wish on a shooting star.',
+    category: 'nature',
+    difficulty: 'easy'
+  },
+  {
+    word: 'sky',
+    definition: 'The space above the earth where you see clouds, sun, moon, and stars.',
+    example: 'The sky is blue today.',
+    category: 'nature',
+    difficulty: 'easy'
+  },
+  {
+    word: 'cloud',
+    definition: 'White or gray fluffy things floating in the sky.',
+    example: 'That cloud looks like a bunny.',
+    category: 'nature',
+    difficulty: 'easy'
+  },
+  {
+    word: 'rain',
+    definition: 'Water that falls from clouds in the sky.',
+    example: 'We need an umbrella when it rains.',
+    category: 'nature',
+    difficulty: 'easy'
+  },
+  {
+    word: 'snow',
+    definition: 'Soft white flakes that fall from the sky when it is very cold.',
+    example: 'We build a snowman when it snows.',
+    category: 'nature',
+    difficulty: 'easy'
+  },
+  {
+    word: 'wind',
+    definition: 'Moving air that you can feel but cannot see.',
+    example: 'The wind blew my hat away.',
+    category: 'nature',
+    difficulty: 'easy',
+    synonyms: ['breeze']
+  },
 
   // HARD WORDS (150 entries)
   {
