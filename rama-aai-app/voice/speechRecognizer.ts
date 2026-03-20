@@ -28,19 +28,38 @@ export class SpeechRecognizer {
 
     this.isListening = true;
 
-    // Set a 10-second timeout to prevent infinite listening
+    // Set a 15-second timeout to give more time for speaking
     this.timeoutId = setTimeout(() => {
       if (this.isListening) {
         this.stopListening();
         onError?.('Listening timeout. Please try again!');
       }
-    }, 10000);
+    }, 15000);
 
     this.recognition.onresult = (event: any) => {
       this.clearListeningTimeout();
-      const transcript = event.results[0][0].transcript;
-      if (transcript && transcript.trim().length > 0) {
-        onResult(transcript);
+      
+      // Get the best transcript from all alternatives
+      let bestTranscript = '';
+      let bestConfidence = 0;
+      
+      for (let i = 0; i < event.results[0].length; i++) {
+        const alternative = event.results[0][i];
+        if (alternative.confidence > bestConfidence) {
+          bestConfidence = alternative.confidence;
+          bestTranscript = alternative.transcript;
+        }
+      }
+      
+      // Use the first result if no confidence scores available
+      if (!bestTranscript) {
+        bestTranscript = event.results[0][0].transcript;
+      }
+      
+      console.log('Speech recognized:', bestTranscript, 'Confidence:', bestConfidence);
+      
+      if (bestTranscript && bestTranscript.trim().length > 0) {
+        onResult(bestTranscript.trim());
       } else {
         onError?.('Could not hear you clearly. Please try again!');
       }

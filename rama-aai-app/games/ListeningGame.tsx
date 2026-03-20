@@ -14,9 +14,13 @@ interface ListeningGameProps {
 export default function ListeningGame({ word, images, onComplete }: ListeningGameProps) {
   const [hasPlayed, setHasPlayed] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [shuffledImages, setShuffledImages] = useState(images);
   const voiceSynth = new VoiceSynthesizer();
 
   useEffect(() => {
+    // Shuffle images so correct answer isn't always first
+    const shuffled = [...images].sort(() => Math.random() - 0.5);
+    setShuffledImages(shuffled);
     playWord();
   }, []);
 
@@ -72,7 +76,7 @@ export default function ListeningGame({ word, images, onComplete }: ListeningGam
 
       {hasPlayed && (
         <div className="grid grid-cols-2 gap-6 max-w-lg">
-          {images.map((image, index) => (
+          {shuffledImages.map((image, index) => (
             <motion.button
               key={index}
               onClick={() => handleImageClick(image.word)}
